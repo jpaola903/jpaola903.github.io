@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jane Paola - Senior QA Engineer Portfolio showcasing expertise in automation testing, AI-enhanced testing, and technical documentation.">
+    <meta name="keywords" content="QA Engineer, Software Testing, Automation Testing, AI Testing, Technical Documentation">
+    <meta name="author" content="Jane Paola">
     <title>Jane Paola - Senior QA Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     animation: {
@@ -83,42 +87,61 @@
         }
     </style>
 </head>
-<body class="bg-gray-900 text-white overflow-x-hidden">
+<body class="bg-gray-900 text-white overflow-x-hidden dark:bg-gray-800 dark:text-gray-100 transition-colors duration-300">
     <!-- Animated Background -->
     <div class="fixed inset-0 gradient-bg opacity-20 -z-10"></div>
     
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 glass">
+    <nav class="fixed top-0 w-full z-50 glass" role="navigation" aria-label="Main navigation">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
                 <div class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                     Jane Paola
                 </div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#hero" class="hover:text-purple-400 transition-colors">Home</a>
-                    <a href="#about" class="hover:text-purple-400 transition-colors">About</a>
-                    <a href="#projects" class="hover:text-purple-400 transition-colors">Projects</a>
-                    <a href="#skills" class="hover:text-purple-400 transition-colors">Skills</a>
-                    <a href="#contact" class="hover:text-purple-400 transition-colors">Contact</a>
+                    <a href="#hero" class="hover:text-purple-400 transition-colors" aria-label="Home">Home</a>
+                    <a href="#about" class="hover:text-purple-400 transition-colors" aria-label="About">About</a>
+                    <a href="#projects" class="hover:text-purple-400 transition-colors" aria-label="Projects">Projects</a>
+                    <a href="#skills" class="hover:text-purple-400 transition-colors" aria-label="Skills">Skills</a>
+                    <a href="#contact" class="hover:text-purple-400 transition-colors" aria-label="Contact">Contact</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none" aria-label="Toggle mobile menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+                <button id="theme-toggle" class="ml-4 text-white focus:outline-none" aria-label="Toggle dark mode">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                </button>
+            </div>
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="flex flex-col space-y-4 py-4">
+                    <a href="#hero" class="hover:text-purple-400 transition-colors" aria-label="Home">Home</a>
+                    <a href="#about" class="hover:text-purple-400 transition-colors" aria-label="About">About</a>
+                    <a href="#projects" class="hover:text-purple-400 transition-colors" aria-label="Projects">Projects</a>
+                    <a href="#skills" class="hover:text-purple-400 transition-colors" aria-label="Skills">Skills</a>
+                    <a href="#contact" class="hover:text-purple-400 transition-colors" aria-label="Contact">Contact</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="min-h-screen flex items-center justify-center px-6 lg:px-8 pt-20">
+    <section id="hero" class="min-h-screen flex items-center justify-center px-6 lg:px-8 pt-20" role="region" aria-label="Hero section">
         <div class="max-w-6xl mx-auto text-center">
             <div class="animate-fade-in-up">
                 <h1 class="text-6xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent">
                     Senior QA Engineer
                 </h1>
-                <div class="typing-animation text-xl lg:text-2xl mb-8 text-gray-300">
+                <div class="typing-animation text-xl lg:text-2xl mb-8 text-gray-300 dark:text-gray-200">
                     Technical Documentation Expert
                 </div>
             </div>
             
             <div class="animate-fade-in-up delay-200 mb-12">
-                <p class="text-lg lg:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                <p class="text-lg lg:text-xl text-gray-300 dark:text-gray-200 max-w-4xl mx-auto leading-relaxed">
                     Quality Assurance professional with <span class="text-purple-400 font-semibold">9+ years</span> of experience driving continuous improvement across healthcare, publishing, and digital platforms.
                 </p>
             </div>
@@ -127,19 +150,19 @@
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12 animate-fade-in-up delay-400">
                 <div class="glass rounded-xl p-6 card-hover">
                     <div class="text-4xl font-bold text-green-400 mb-2">98%</div>
-                    <div class="text-sm text-gray-400">Defect Resolution Rate</div>
+                    <div class="text-sm text-gray-400 dark:text-gray-300">Defect Resolution Rate</div>
                 </div>
                 <div class="glass rounded-xl p-6 card-hover">
                     <div class="text-4xl font-bold text-blue-400 mb-2">50%</div>
-                    <div class="text-sm text-gray-400">Testing Time Reduction</div>
+                    <div class="text-sm text-gray-400 dark:text-gray-300">Testing Time Reduction</div>
                 </div>
                 <div class="glass rounded-xl p-6 card-hover">
                     <div class="text-4xl font-bold text-purple-400 mb-2">35%</div>
-                    <div class="text-sm text-gray-400">Test Coverage Improvement</div>
+                    <div class="text-sm text-gray-400 dark:text-gray-300">Test Coverage Improvement</div>
                 </div>
                 <div class="glass rounded-xl p-6 card-hover">
                     <div class="text-4xl font-bold text-pink-400 mb-2">3+</div>
-                    <div class="text-sm text-gray-400">Years AI Integration</div>
+                    <div class="text-sm text-gray-400 dark:text-gray-300">Years AI Integration</div>
                 </div>
             </div>
 
@@ -156,10 +179,10 @@
 
             <!-- CTA Buttons -->
             <div class="animate-fade-in-up delay-800 space-x-6">
-                <a href="#projects" class="inline-block bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 px-8 py-4 rounded-full font-semibold transition-all transform hover:scale-105 hover:shadow-lg">
+                <a href="#projects" class="inline-block bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 px-8 py-4 rounded-full font-semibold transition-all transform hover:scale-105 hover:shadow-lg" aria-label="View projects">
                     View My Work
                 </a>
-                <a href="#contact" class="inline-block border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-4 rounded-full font-semibold transition-all transform hover:scale-105">
+                <a href="#contact" class="inline-block border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-4 rounded-full font-semibold transition-all transform hover:scale-105" aria-label="Contact me">
                     Get In Touch
                 </a>
             </div>
@@ -167,13 +190,13 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 px-6 lg:px-8">
+    <section id="about" class="py-20 px-6 lg:px-8" role="region" aria-label="About section">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-4xl lg:text-5xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 About Me
             </h2>
             <div class="glass rounded-2xl p-8">
-                <p class="text-lg text-gray-300 leading-relaxed">
+                <p class="text-lg text-gray-300 dark:text-gray-200 leading-relaxed">
                     Detail-oriented QA Engineer with expertise in functional, regression, and automation testing across e-commerce, healthcare, and fintech domains. Passionate about integrating AI tools to optimize testing workflows and improve software quality.
                 </p>
             </div>
@@ -181,7 +204,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 px-6 lg:px-8">
+    <section id="projects" class="py-20 px-6 lg:px-8" role="region" aria-label="Projects section">
         <div class="max-w-7xl mx-auto">
             <h2 class="text-4xl lg:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Featured Projects
@@ -197,13 +220,13 @@
                                     <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h4a1 1 0 010 2H6.414l2.293 2.293a1 1 0 11-1.414 1.414L5 6.414V8a1 1 0 01-2 0V4zm9 1a1 1 0 010-2h4a1 1 0 011 1v4a1 1 0 01-2 0V6.414l-2.293 2.293a1 1 0 11-1.414-1.414L13.586 5H12z" clip-rule="evenodd"/>
                                 </svg>
                             </div>
-                            <h3 class="text-2xl font-bold mb-4 text-white">Healthcare Platform Testing Suite</h3>
+                            <h3 class="text-2xl font-bold mb-4 text-white dark:text-gray-100">Healthcare Platform Testing Suite</h3>
                             <div class="text-sm text-purple-400 mb-2">Software QA / Technical Writer</div>
-                            <div class="text-sm text-gray-400 mb-6">Healthcare Tech Company | Oct 2021 - Present</div>
+                            <div class="text-sm text-gray-400 dark:text-gray-300 mb-6">Healthcare Tech Company | Oct 2021 - Present</div>
                         </div>
                         
                         <div class="lg:w-2/3">
-                            <p class="text-gray-300 mb-6">
+                            <p class="text-gray-300 dark:text-gray-200 mb-6">
                                 Led comprehensive testing for multiple healthcare applications serving thousands of users daily, including patient-facing mobile/web apps and internal clinical tools for healthcare professionals.
                             </p>
                             
@@ -211,7 +234,7 @@
                             <div class="grid md:grid-cols-2 gap-6 mb-6">
                                 <div class="bg-gray-800/50 rounded-lg p-4">
                                     <h4 class="font-semibold text-green-400 mb-2">Patient Portal Application</h4>
-                                    <ul class="text-sm text-gray-300 space-y-1">
+                                    <ul class="text-sm text-gray-300 dark:text-gray-200 space-y-1">
                                         <li>• Authentication & eligibility verification</li>
                                         <li>• VoIP integration for teleconsultations</li>
                                         <li>• Medical record access systems</li>
@@ -220,7 +243,7 @@
                                 </div>
                                 <div class="bg-gray-800/50 rounded-lg p-4">
                                     <h4 class="font-semibold text-blue-400 mb-2">Clinical Management Tools</h4>
-                                    <ul class="text-sm text-gray-300 space-y-1">
+                                    <ul class="text-sm text-gray-300 dark:text-gray-200 space-y-1">
                                         <li>• Healthcare assistant backend systems</li>
                                         <li>• Medical professional frontend apps</li>
                                         <li>• Case triage and termination workflows</li>
@@ -235,19 +258,19 @@
                                 <div class="grid md:grid-cols-2 gap-3">
                                     <div class="flex items-center space-x-2">
                                         <div class="w-2 h-2 bg-green-400 rounded-full"></div>
-                                        <span class="text-sm text-gray-300">98% defect resolution rate</span>
+                                        <span class="text-sm text-gray-300 dark:text-gray-200">98% defect resolution rate</span>
                                     </div>
                                     <div class="flex items-center space-x-2">
                                         <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
-                                        <span class="text-sm text-gray-300">35% test coverage improvement</span>
+                                        <span class="text-sm text-gray-300 dark:text-gray-200">35% test coverage improvement</span>
                                     </div>
                                     <div class="flex items-center space-x-2">
                                         <div class="w-2 h-2 bg-purple-400 rounded-full"></div>
-                                        <span class="text-sm text-gray-300">30% reduced onboarding time</span>
+                                        <span class="text-sm text-gray-300 dark:text-gray-200">30% reduced onboarding time</span>
                                     </div>
                                     <div class="flex items-center space-x-2">
                                         <div class="w-2 h-2 bg-pink-400 rounded-full"></div>
-                                        <span class="text-sm text-gray-300">Prevented critical data discrepancies</span>
+                                        <span class="text-sm text-gray-300 dark:text-gray-200">Prevented critical data discrepancies</span>
                                     </div>
                                 </div>
                             </div>
@@ -272,13 +295,13 @@
                                     <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
                                 </svg>
                             </div>
-                            <h3 class="text-2xl font-bold mb-4 text-white">Digital Platform QA Portfolio</h3>
+                            <h3 class="text-2xl font-bold mb-4 text-white dark:text-gray-100">Digital Platform QA Portfolio</h3>
                             <div class="text-sm text-purple-400 mb-2">QA Supervisor</div>
-                            <div class="text-sm text-gray-400 mb-6">Digital Marketing Agency | Aug 2018 - Oct 2021</div>
+                            <div class="text-sm text-gray-400 dark:text-gray-300 mb-6">Digital Marketing Agency | Aug 2018 - Oct 2021</div>
                         </div>
                         
                         <div class="lg:w-2/3">
-                            <p class="text-gray-300 mb-6">
+                            <p class="text-gray-300 dark:text-gray-200 mb-6">
                                 Supervised comprehensive QA processes across multiple client projects, including e-commerce platforms, financial applications, progressive web apps, and enterprise automation systems.
                             </p>
                             
@@ -286,7 +309,7 @@
                             <div class="grid md:grid-cols-2 gap-6 mb-6">
                                 <div class="bg-gray-800/50 rounded-lg p-4">
                                     <h4 class="font-semibold text-purple-400 mb-2">E-commerce Platform Suite</h4>
-                                    <ul class="text-sm text-gray-300 space-y-1">
+                                    <ul class="text-sm text-gray-300 dark:text-gray-200 space-y-1">
                                         <li>• Multi-brand food service testing</li>
                                         <li>• Payment system validation</li>
                                         <li>• Cross-platform compatibility</li>
@@ -295,7 +318,7 @@
                                 </div>
                                 <div class="bg-gray-800/50 rounded-lg p-4">
                                     <h4 class="font-semibold text-pink-400 mb-2">Financial Services App</h4>
-                                    <ul class="text-sm text-gray-300 space-y-1">
+                                    <ul class="text-sm text-gray-300 dark:text-gray-200 space-y-1">
                                         <li>• Credit card application testing</li>
                                         <li>• End-to-end process validation</li>
                                         <li>• Security and compliance testing</li>
@@ -310,19 +333,19 @@
                                 <div class="grid md:grid-cols-2 gap-3">
                                     <div class="flex items-center space-x-2">
                                         <div class="w-2 h-2 bg-green-400 rounded-full"></div>
-                                        <span class="text-sm text-gray-300">40% bug recurrence reduction</span>
+                                        <span class="text-sm text-gray-300 dark:text-gray-200">40% bug recurrence reduction</span>
                                     </div>
                                     <div class="flex items-center space-x-2">
                                         <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
-                                        <span class="text-sm text-gray-300">50% testing time reduction</span>
+                                        <span class="text-sm text-gray-300 dark:text-gray-200">50% testing time reduction</span>
                                     </div>
                                     <div class="flex items-center space-x-2">
                                         <div class="w-2 h-2 bg-purple-400 rounded-full"></div>
-                                        <span class="text-sm text-gray-300">25% team efficiency enhancement</span>
+                                        <span class="text-sm text-gray-300 dark:text-gray-200">25% team efficiency enhancement</span>
                                     </div>
                                     <div class="flex items-center space-x-2">
                                         <div class="w-2 h-2 bg-pink-400 rounded-full"></div>
-                                        <span class="text-sm text-gray-300">5+ concurrent client projects</span>
+                                        <span class="text-sm text-gray-300 dark:text-gray-200">5+ concurrent client projects</span>
                                     </div>
                                 </div>
                             </div>
@@ -347,13 +370,13 @@
                                     <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm0 2v8h12V6H4zm2 2h8v2H6V8zm0 4h4v2H6v-2z" clip-rule="evenodd"/>
                                 </svg>
                             </div>
-                            <h3 class="text-2xl font-bold mb-4 text-white">Publishing Platform QA Systems</h3>
+                            <h3 class="text-2xl font-bold mb-4 text-white dark:text-gray-100">Publishing Platform QA Systems</h3>
                             <div class="text-sm text-purple-400 mb-2">Senior System QA Engineer</div>
-                            <div class="text-sm text-gray-400 mb-6">Media & Publishing Company | Aug 2016 - Aug 2018</div>
+                            <div class="text-sm text-gray-400 dark:text-gray-300 mb-6">Media & Publishing Company | Aug 2016 - Aug 2018</div>
                         </div>
                         
                         <div class="lg:w-2/3">
-                            <p class="text-gray-300 mb-6">
+                            <p class="text-gray-300 dark:text-gray-200 mb-6">
                                 Developed structured testing programs for digital publishing platforms and content management systems. Managed defect tracking and coordinated with technical teams to optimize QA processes for high-traffic editorial platforms.
                             </p>
                             
@@ -361,7 +384,7 @@
                             <div class="grid md:grid-cols-2 gap-6 mb-6">
                                 <div class="bg-gray-800/50 rounded-lg p-4">
                                     <h4 class="font-semibold text-yellow-400 mb-2">Automotive Classified Platform</h4>
-                                    <ul class="text-sm text-gray-300 space-y-1">
+                                    <ul class="text-sm text-gray-300 dark:text-gray-200 space-y-1">
                                         <li>• Classified listing management</li>
                                         <li>• Field data collection workflows</li>
                                         <li>• Vehicle listing processes</li>
@@ -370,7 +393,7 @@
                                 </div>
                                 <div class="bg-gray-800/50 rounded-lg p-4">
                                     <h4 class="font-semibold text-orange-400 mb-2">Content Management Systems</h4>
-                                    <ul class="text-sm text-gray-300 space-y-1">
+                                    <ul class="text-sm text-gray-300 dark:text-gray-200 space-y-1">
                                         <li>• Editorial workflow testing</li>
                                         <li>• SEO compliance validation</li>
                                         <li>• Multi-user content management</li>
@@ -385,19 +408,19 @@
                                 <div class="grid md:grid-cols-2 gap-3">
                                     <div class="flex items-center space-x-2">
                                         <div class="w-2 h-2 bg-green-400 rounded-full"></div>
-                                        <span class="text-sm text-gray-300">95% customer issue resolution</span>
+                                        <span class="text-sm text-gray-300 dark:text-gray-200">95% customer issue resolution</span>
                                     </div>
                                     <div class="flex items-center space-x-2">
                                         <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
-                                        <span class="text-sm text-gray-300">Improved system stability</span>
+                                        <span class="text-sm text-gray-300 dark:text-gray-200">Improved system stability</span>
                                     </div>
                                     <div class="flex items-center space-x-2">
                                         <div class="w-2 h-2 bg-purple-400 rounded-full"></div>
-                                        <span class="text-sm text-gray-300">SEO compliance assurance</span>
+                                        <span class="text-sm text-gray-300 dark:text-gray-200">SEO compliance assurance</span>
                                     </div>
                                     <div class="flex items-center space-x-2">
                                         <div class="w-2 h-2 bg-pink-400 rounded-full"></div>
-                                        <span class="text-sm text-gray-300">Streamlined data processes</span>
+                                        <span class="text-sm text-gray-300 dark:text-gray-200">Streamlined data processes</span>
                                     </div>
                                 </div>
                             </div>
@@ -417,7 +440,7 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-20 px-6 lg:px-8">
+    <section id="skills" class="py-20 px-6 lg:px-8" role="region" aria-label="Skills section">
         <div class="max-w-7xl mx-auto">
             <h2 class="text-4xl lg:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Technical Skills & Expertise
@@ -430,37 +453,80 @@
                     <div class="space-y-4">
                         <div class="skill-item">
                             <div class="flex justify-between items-center mb-2">
-                                <span class="text-white">Claude AI</span>
+                                <span class="text-white dark:text-gray-100">Postman (API Testing)</span>
+                                <span class="text-purple-400 text-sm">80%</span>
+                            </div>
+                            <div class="bg-gray-700 dark:bg-gray-600 rounded-full h-2">
+                                <div class="skill-bar-fill bg-gradient-to-r from-purple-400 to-pink-400 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-white dark:text-gray-100">Selenium (Automation)</span>
+                                <span class="text-blue-400 text-sm">70%</span>
+                            </div>
+                            <div class="bg-gray-700 dark:bg-gray-600 rounded-full h-2">
+                                <div class="skill-bar-fill bg-gradient-to-r from-blue-400 to-blue-600 h-2 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-white dark:text-gray-100">MySQL Database Testing</span>
+                                <span class="text-green-400 text-sm">60%</span>
+                            </div>
+                            <div class="bg-gray-700 dark:bg-gray-600 rounded-full h-2">
+                                <div class="skill-bar-fill bg-gradient-to-r from-green-400 to-green-600 h-2 rounded-full" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-white dark:text-gray-100">Playwright (Learning)</span>
+                                <span class="text-yellow-400 text-sm">40%</span>
+                            </div>
+                            <div class="bg-gray-700 dark:bg-gray-600 rounded-full h-2">
+                                <div class="skill-bar-fill bg-gradient-to-r from-yellow-400 to-yellow-600 h-2 rounded-full" style="width: 40%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Enhanced Testing -->
+                <div class="glass rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold mb-6 text-pink-400">🤖 AI-Enhanced Testing</h3>
+                    <div class="space-y-4">
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-white dark:text-gray-100">Claude AI</span>
                                 <span class="text-pink-400 text-sm">80%</span>
                             </div>
-                            <div class="bg-gray-700 rounded-full h-2">
+                            <div class="bg-gray-700 dark:bg-gray-600 rounded-full h-2">
                                 <div class="skill-bar-fill bg-gradient-to-r from-pink-400 to-pink-600 h-2 rounded-full" style="width: 80%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
                             <div class="flex justify-between items-center mb-2">
-                                <span class="text-white">ChatGPT</span>
+                                <span class="text-white dark:text-gray-100">ChatGPT</span>
                                 <span class="text-green-400 text-sm">80%</span>
                             </div>
-                            <div class="bg-gray-700 rounded-full h-2">
+                            <div class="bg-gray-700 dark:bg-gray-600 rounded-full h-2">
                                 <div class="skill-bar-fill bg-gradient-to-r from-green-400 to-green-600 h-2 rounded-full" style="width: 80%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
                             <div class="flex justify-between items-center mb-2">
-                                <span class="text-white">DeepSeek</span>
+                                <span class="text-white dark:text-gray-100">DeepSeek</span>
                                 <span class="text-purple-400 text-sm">80%</span>
                             </div>
-                            <div class="bg-gray-700 rounded-full h-2">
+                            <div class="bg-gray-700 dark:bg-gray-600 rounded-full h-2">
                                 <div class="skill-bar-fill bg-gradient-to-r from-purple-400 to-purple-600 h-2 rounded-full" style="width: 80%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
                             <div class="flex justify-between items-center mb-2">
-                                <span class="text-white">GitHub CoPilot</span>
+                                <span class="text-white dark:text-gray-100">GitHub CoPilot</span>
                                 <span class="text-blue-400 text-sm">75%</span>
                             </div>
-                            <div class="bg-gray-700 rounded-full h-2">
+                            <div class="bg-gray-700 dark:bg-gray-600 rounded-full h-2">
                                 <div class="skill-bar-fill bg-gradient-to-r from-blue-400 to-blue-600 h-2 rounded-full" style="width: 75%"></div>
                             </div>
                         </div>
@@ -473,37 +539,37 @@
                     <div class="space-y-4">
                         <div class="skill-item">
                             <div class="flex justify-between items-center mb-2">
-                                <span class="text-white">Jira</span>
+                                <span class="text-white dark:text-gray-100">Jira</span>
                                 <span class="text-blue-400 text-sm">80%</span>
                             </div>
-                            <div class="bg-gray-700 rounded-full h-2">
+                            <div class="bg-gray-700 dark:bg-gray-600 rounded-full h-2">
                                 <div class="skill-bar-fill bg-gradient-to-r from-blue-400 to-blue-600 h-2 rounded-full" style="width: 80%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
                             <div class="flex justify-between items-center mb-2">
-                                <span class="text-white">Asana / ClickUp</span>
+                                <span class="text-white dark:text-gray-100">Asana / ClickUp</span>
                                 <span class="text-green-400 text-sm">75%</span>
                             </div>
-                            <div class="bg-gray-700 rounded-full h-2">
+                            <div class="bg-gray-700 dark:bg-gray-600 rounded-full h-2">
                                 <div class="skill-bar-fill bg-gradient-to-r from-green-400 to-green-600 h-2 rounded-full" style="width: 75%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
                             <div class="flex justify-between items-center mb-2">
-                                <span class="text-white">Miro (Workflow Design)</span>
+                                <span class="text-white dark:text-gray-100">Miro (Workflow Design)</span>
                                 <span class="text-purple-400 text-sm">80%</span>
                             </div>
-                            <div class="bg-gray-700 rounded-full h-2">
+                            <div class="bg-gray-700 dark:bg-gray-600 rounded-full h-2">
                                 <div class="skill-bar-fill bg-gradient-to-r from-purple-400 to-purple-600 h-2 rounded-full" style="width: 80%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
                             <div class="flex justify-between items-center mb-2">
-                                <span class="text-white">Git Version Control</span>
+                                <span class="text-white dark:text-gray-100">Git Version Control</span>
                                 <span class="text-red-400 text-sm">50%</span>
                             </div>
-                            <div class="bg-gray-700 rounded-full h-2">
+                            <div class="bg-gray-700 dark:bg-gray-600 rounded-full h-2">
                                 <div class="skill-bar-fill bg-gradient-to-r from-red-400 to-red-600 h-2 rounded-full" style="width: 50%"></div>
                             </div>
                         </div>
@@ -514,29 +580,29 @@
                 <div class="glass rounded-2xl p-8">
                     <h3 class="text-2xl font-bold mb-6 text-green-400">🧪 Testing Specializations</h3>
                     <div class="space-y-4">
-                        <div class="bg-gray-800/50 rounded-lg p-4">
+                        <div class="bg-gray-800/50 dark:bg-gray-700/50 rounded-lg p-4">
                             <h4 class="font-semibold text-green-400 mb-2">Manual Testing</h4>
-                            <p class="text-sm text-gray-300">End-to-end web & mobile application testing</p>
+                            <p class="text-sm text-gray-300 dark:text-gray-200">End-to-end web & mobile application testing</p>
                         </div>
-                        <div class="bg-gray-800/50 rounded-lg p-4">
+                        <div class="bg-gray-800/50 dark:bg-gray-700/50 rounded-lg p-4">
                             <h4 class="font-semibold text-blue-400 mb-2">Automation Testing</h4>
-                            <p class="text-sm text-gray-300">Selenium framework implementation & maintenance</p>
+                            <p class="text-sm text-gray-300 dark:text-gray-200">Selenium framework implementation & maintenance</p>
                         </div>
-                        <div class="bg-gray-800/50 rounded-lg p-4">
+                        <div class="bg-gray-800/50 dark:bg-gray-700/50 rounded-lg p-4">
                             <h4 class="font-semibold text-purple-400 mb-2">Cross-Browser Testing</h4>
-                            <p class="text-sm text-gray-300">Compatibility across major browsers & platforms</p>
+                            <p class="text-sm text-gray-300 dark:text-gray-200">Compatibility across major browsers & platforms</p>
                         </div>
-                        <div class="bg-gray-800/50 rounded-lg p-4">
+                        <div class="bg-gray-800/50 dark:bg-gray-700/50 rounded-lg p-4">
                             <h4 class="font-semibold text-pink-400 mb-2">API Testing</h4>
-                            <p class="text-sm text-gray-300">RESTful service testing with Postman</p>
+                            <p class="text-sm text-gray-300 dark:text-gray-200">RESTful service testing with Postman</p>
                         </div>
-                        <div class="bg-gray-800/50 rounded-lg p-4">
+                        <div class="bg-gray-800/50 dark:bg-gray-700/50 rounded-lg p-4">
                             <h4 class="font-semibold text-yellow-400 mb-2">Database Testing</h4>
-                            <p class="text-sm text-gray-300">SQL queries for data integrity validation</p>
+                            <p class="text-sm text-gray-300 dark:text-gray-200">SQL queries for data integrity validation</p>
                         </div>
-                        <div class="bg-gray-800/50 rounded-lg p-4">
+                        <div class="bg-gray-800/50 dark:bg-gray-700/50 rounded-lg p-4">
                             <h4 class="font-semibold text-red-400 mb-2">User Acceptance Testing</h4>
-                            <p class="text-sm text-gray-300">End-user experience validation</p>
+                            <p class="text-sm text-gray-300 dark:text-gray-200">End-user experience validation</p>
                         </div>
                     </div>
                 </div>
@@ -553,8 +619,8 @@
                             </svg>
                         </div>
                         <h4 class="font-bold text-lg mb-2 text-green-400">Healthcare Technology</h4>
-                        <p class="text-sm text-gray-300 mb-2">3+ years</p>
-                        <p class="text-xs text-gray-400">Healthcare platforms, medical data validation, compliance</p>
+                        <p class="text-sm text-gray-300 dark:text-gray-200 mb-2">3+ years</p>
+                        <p class="text-xs text-gray-400 dark:text-gray-300">Healthcare platforms, medical data validation, compliance</p>
                     </div>
                     
                     <div class="glass rounded-xl p-6 text-center card-hover">
@@ -564,8 +630,8 @@
                             </svg>
                         </div>
                         <h4 class="font-bold text-lg mb-2 text-purple-400">Digital Publishing</h4>
-                        <p class="text-sm text-gray-300 mb-2">2+ years</p>
-                        <p class="text-xs text-gray-400">CMS, SEO testing, editorial workflows, high-traffic platforms</p>
+                        <p class="text-sm text-gray-300 dark:text-gray-200 mb-2">2+ years</p>
+                        <p class="text-xs text-gray-400 dark:text-gray-300">CMS, SEO testing, editorial workflows, high-traffic platforms</p>
                     </div>
                     
                     <div class="glass rounded-xl p-6 text-center card-hover">
@@ -575,8 +641,8 @@
                             </svg>
                         </div>
                         <h4 class="font-bold text-lg mb-2 text-yellow-400">E-commerce</h4>
-                        <p class="text-sm text-gray-300 mb-2">Project experience</p>
-                        <p class="text-xs text-gray-400">Payment systems, order processing, multi-brand platforms</p>
+                        <p class="text-sm text-gray-300 dark:text-gray-200 mb-2">Project experience</p>
+                        <p class="text-xs text-gray-400 dark:text-gray-300">Payment systems, order processing, multi-brand platforms</p>
                     </div>
                     
                     <div class="glass rounded-xl p-6 text-center card-hover">
@@ -586,8 +652,8 @@
                             </svg>
                         </div>
                         <h4 class="font-bold text-lg mb-2 text-blue-400">Digital Marketing</h4>
-                        <p class="text-sm text-gray-300 mb-2">3 years</p>
-                        <p class="text-xs text-gray-400">Web applications, mobile platforms, automation frameworks</p>
+                        <p class="text-sm text-gray-300 dark:text-gray-200 mb-2">3 years</p>
+                        <p class="text-xs text-gray-400 dark:text-gray-300">Web applications, mobile platforms, automation frameworks</p>
                     </div>
                 </div>
             </div>
@@ -595,38 +661,45 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 px-6 lg:px-8">
+    <section id="contact" class="py-20 px-6 lg:px-8" role="region" aria-label="Contact section">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-4xl lg:text-5xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Let's Work Together
             </h2>
             <div class="glass rounded-2xl p-8 mb-8">
-                <p class="text-lg text-gray-300 mb-8">
+                <p class="text-lg text-gray-300 dark:text-gray-200 mb-8">
                     Ready to elevate your software quality? Let's discuss how my QA expertise can help your team deliver exceptional user experiences.
                 </p>
                 <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
-                    <a href="mailto:jane.paola@email.com" class="flex items-center space-x-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 px-6 py-3 rounded-full font-semibold transition-all transform hover:scale-105">
+                    <a href="mailto:janesoriano09@gmail.com" class="flex items-center space-x-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 px-6 py-3 rounded-full font-semibold transition-all transform hover:scale-105" aria-label="Email Jane Paola">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
                             <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
                         </svg>
                         <span>Email Me</span>
                     </a>
-                    <a href="#" class="flex items-center space-x-3 border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-6 py-3 rounded-full font-semibold transition-all transform hover:scale-105">
+                    <a href="mailto:janesoriano09@gmail.com?subject=Resume Request" class="flex items-center space-x-3 border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-6 py-3 rounded-full font-semibold transition-all transform hover:scale-105" aria-label="Request resume">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                         </svg>
-                        <span>Download Resume</span>
+                        <span>Request Resume</span>
                     </a>
+                    <a href="www.linkedin.com/in/jane-s-a763b914b" class="flex items-center space-x-3 border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-6 py-3 rounded-full font-semibold transition-all transform hover:scale-105" aria-label="Visit LinkedIn profile">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2.5 18h3V6.9h-3V18zM4 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm6.6 6.9h-3V18h3V8.9zm5.4 0h-3v9.1h3V8.9zm-1.5-2c0-1.1-.9-2-2-2s-2 .9-2 2 .9 2 2 2 2-.9 2-2z"/>
+                        </svg>
+                        <span>LinkedIn</span>
+                    </a>
+                   
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 px-6 lg:px-8 border-t border-gray-800">
+    <footer class="py-8 px-6 lg:px-8 border-t border-gray-800 dark:border-gray-700">
         <div class="max-w-7xl mx-auto text-center">
-            <p class="text-gray-400">&copy; 2025 Jane Paola. All rights reserved.</p>
+            <p class="text-gray-400 dark:text-gray-300">&copy; 2025 Jane Paola. All rights reserved.</p>
         </div>
     </footer>
 
@@ -641,6 +714,28 @@
                 });
             });
         });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('#mobile-menu-button');
+        const mobileMenu = document.querySelector('#mobile-menu');
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Dark mode toggle
+        const themeToggle = document.querySelector('#theme-toggle');
+        if (themeToggle) {
+            themeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark');
+                localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+            });
+            // Load saved theme
+            if (localStorage.getItem('theme') === 'dark') {
+                document.body.classList.add('dark');
+            }
+        }
 
         // Intersection Observer for fade-in animations
         const observerOptions = {
@@ -715,58 +810,15 @@
             card.classList.add('animate-float');
         });
 
-        // Mobile menu toggle (if needed)
-        const mobileMenuButton = document.querySelector('#mobile-menu-button');
-        const mobileMenu = document.querySelector('#mobile-menu');
-        
-        if (mobileMenuButton && mobileMenu) {
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
+        // Keyboard navigation support
+        document.querySelectorAll('a, button').forEach(element => {
+            element.addEventListener('focus', () => {
+                element.classList.add('ring-2', 'ring-purple-400');
             });
-        }
+            element.addEventListener('blur', () => {
+                element.classList.remove('ring-2', 'ring-purple-400');
+            });
+        });
     </script>
 </body>
 </html>
-                                <span class="text-white">Postman (API Testing)</span>
-                                <span class="text-purple-400 text-sm">80%</span>
-                            </div>
-                            <div class="bg-gray-700 rounded-full h-2">
-                                <div class="skill-bar-fill bg-gradient-to-r from-purple-400 to-pink-400 h-2 rounded-full" style="width: 80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="text-white">Selenium (Automation)</span>
-                                <span class="text-blue-400 text-sm">70%</span>
-                            </div>
-                            <div class="bg-gray-700 rounded-full h-2">
-                                <div class="skill-bar-fill bg-gradient-to-r from-blue-400 to-blue-600 h-2 rounded-full" style="width: 70%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="text-white">MySQL Database Testing</span>
-                                <span class="text-green-400 text-sm">60%</span>
-                            </div>
-                            <div class="bg-gray-700 rounded-full h-2">
-                                <div class="skill-bar-fill bg-gradient-to-r from-green-400 to-green-600 h-2 rounded-full" style="width: 60%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="text-white">Playwright (Learning)</span>
-                                <span class="text-yellow-400 text-sm">40%</span>
-                            </div>
-                            <div class="bg-gray-700 rounded-full h-2">
-                                <div class="skill-bar-fill bg-gradient-to-r from-yellow-400 to-yellow-600 h-2 rounded-full" style="width: 40%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- AI Enhanced Testing -->
-                <div class="glass rounded-2xl p-8">
-                    <h3 class="text-2xl font-bold mb-6 text-pink-400">🤖 AI-Enhanced Testing</h3>
-                    <div class="space-y-4">
-                        <div class="skill-item">
-                            <div class="flex justify-between items-center mb-2">
