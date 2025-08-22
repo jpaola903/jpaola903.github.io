@@ -3,424 +3,770 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jane Paola - QA Engineer Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Jane Paola - Senior QA Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'float': 'float 3s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'slide-in-right': 'slideInRight 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        slideInRight: {
+                            '0%': { opacity: '0', transform: 'translateX(50px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #f5576c);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .typing-animation {
+            overflow: hidden;
+            border-right: 2px solid #ffffff;
+            white-space: nowrap;
+            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #ffffff; }
+        }
+        
+        .skill-bar-fill {
+            transition: width 2s ease-in-out;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <nav>
-            <h1>Jane Paola</h1>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="hero">
-            <h2>Senior QA Engineer</h2>
-            <p class="hero-subtitle">Senior QA Engineer | Technical Documentation Expert</p>
-            <p class="hero-description">Quality Assurance professional with 9+ years of experience driving continuous improvement across healthcare, publishing, and digital platforms. Expert in manual and automation testing with proven results: 98% defect resolution rate, 50% reduction in testing time, and 40% decrease in bug recurrence through strategic QA process optimization.</p>
-            <div class="hero-highlights">
-                <div class="highlight">
-                    <span class="highlight-number">98%</span>
-                    <span class="highlight-text">Defect Resolution Rate</span>
+<body class="bg-gray-900 text-white overflow-x-hidden">
+    <!-- Animated Background -->
+    <div class="fixed inset-0 gradient-bg opacity-20 -z-10"></div>
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                    Jane Paola
                 </div>
-                <div class="highlight">
-                    <span class="highlight-number">50%</span>
-                    <span class="highlight-text">Testing Time Reduction</span>
-                </div>
-                <div class="highlight">
-                    <span class="highlight-number">35%</span>
-                    <span class="highlight-text">Test Coverage Improvement</span>
-                </div>
-                <div class="highlight">
-                    <span class="highlight-number">3+</span>
-                    <span class="highlight-text">Years AI Integration</span>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#hero" class="hover:text-purple-400 transition-colors">Home</a>
+                    <a href="#about" class="hover:text-purple-400 transition-colors">About</a>
+                    <a href="#projects" class="hover:text-purple-400 transition-colors">Projects</a>
+                    <a href="#skills" class="hover:text-purple-400 transition-colors">Skills</a>
+                    <a href="#contact" class="hover:text-purple-400 transition-colors">Contact</a>
                 </div>
             </div>
-            <div class="hero-skills-banner">
-                <span>Selenium</span> • <span>Postman</span> • <span>Jira</span> • <span>MySQL</span> • <span>AI-Powered Testing</span> • <span>Cross-Browser Testing</span>
-            </div>
-            <div class="hero-cta">
-                <a href="#projects" class="cta-button">View My Work</a>
-                <a href="#contact" class="cta-button-secondary">Get In Touch</a>
-            </div>
-        </section>
+        </div>
+    </nav>
 
-        <section id="about">
-            <h3>About Me</h3>
-            <p>Detail-oriented QA Engineer with expertise in functional, regression, and automation testing across e-commerce, healthcare, and fintech domains. Passionate about integrating AI tools to optimize testing workflows and improve software quality.</p>
-        </section>
-
-        <section id="projects">
-            <h3>Featured Projects</h3>
-            <div class="project-grid">
-                <div class="project-card">
-                        <h4>Healthcare Platform Testing Suite</h4>
-                    <p class="project-role">Software QA / Technical Writer | Healthcare Tech Company | October 2021 - Present</p>
-                    <p class="project-description">Led comprehensive testing for multiple healthcare applications serving thousands of users daily, including patient-facing mobile/web apps and internal clinical tools for healthcare professionals.</p>
-                    
-                    <div class="project-subprojects">
-                        <div class="subproject">
-                            <h6>Patient Portal Application</h6>
-                            <ul class="subproject-features">
-                                <li>Authentication & eligibility verification systems</li>
-                                <li>Callback request functionality and VoIP integration</li>
-                                <li>Document visibility and medical record access</li>
-                                <li>Cross-platform data validation (mobile/web)</li>
-                                <li>Validated integration with third-party payment provider</li>                                
-
-                            </ul>
-                        </div>
-                        
-                        <div class="subproject">
-                            <h6>Clinical Management Tools</h6>
-                            <ul class="subproject-features">
-                                <li>Backend systems for healthcare assistants</li>
-                                <li>Frontend applications for medical professionals</li>
-                                <li>VoIP integration for teleconsultations</li>
-                                <li>Case triage and termination workflows</li>
-                                <li>Doctor scheduling with real-time case status</li>
-                                <li>User management and document generation systems</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="project-achievements">
-                        <h5>Key Achievements:</h5>
-                        <ul>
-                            <li>Achieved 98% defect resolution rate before release</li>
-                            <li>Improved test coverage by 35% through structured RTM implementation</li>
-                            <li>Reduced onboarding time by 30% via technical documentation</li>
-                            <li>Prevented critical healthcare data discrepancies</li>
-                        </ul>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-tag">VoIP Testing</span>
-                        <span class="tech-tag">Mobile/Web Testing</span>
-                        <span class="tech-tag">MySQL Validation</span>
-                        <span class="tech-tag">AI-Enhanced Testing</span>
-                        <span class="tech-tag">User Manuals</span>
-                        <span class="tech-tag">Technical Documentation</span>
-                        <span class="tech-tag">Process Flowcharts</span>
-                    </div>
-                </div>
-
-
-                <div class="project-card">
-                    <h4>Digital Platform QA Portfolio</h4>
-                     <p class="project-role">QA Supervisor | Digital Marketing Agency | Aug 2018 - Oct 2021</p>
-                    <p class="project-description">Supervised comprehensive QA processes across multiple client projects, including e-commerce platforms, financial applications, progressive web apps, and enterprise automation systems.</p>
-                    
-                    <div class="project-subprojects">
-                        <div class="subproject">
-                            <h6>E-commerce Platform Suite</h6>
-                            <ul class="subproject-features">
-                                <li>Multi-brand food service e-commerce testing</li>
-                                <li>Order processing and payment system validation</li>
-                                <li>User authentication across brand portfolios</li>
-                                <li>Cross-platform compatibility testing</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="subproject">
-                            <h6>Financial Services Application</h6>
-                            <ul class="subproject-features">
-                                <li>Credit card application system testing</li>
-                                <li>End-to-end application process validation</li>
-                                <li>Critical financial data validation</li>
-                                <li>Security and compliance testing</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="subproject">
-                            <h6>Progressive Web Application</h6>
-                            <ul class="subproject-features">
-                                <li>Offline mode functionality testing</li>
-                                <li>Cross-browser and device compatibility</li>
-                                <li>Progressive enhancement validation</li>
-                                <li>Performance and data synchronization testing</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="subproject">
-                            <h6>Enterprise Automation System</h6>
-                            <ul class="subproject-features">
-                                <li>Complex user authentication workflows</li>
-                                <li>Billing and payment processing automation</li>
-                                <li>Order status and notification systems</li>
-                                <li>Multi-location assignment algorithms (stores/delivery/call center)</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="subproject">
-                            <h6>Franchise Management Platform</h6>
-                            <ul class="subproject-features">
-                                <li>Multi-stage application process testing</li>
-                                <li>Document workflow from intent to approval</li>
-                                <li>Integration testing across business systems</li>
-                                <li>End-to-end franchise onboarding validation</li>
-                            </ul>
-                        </div>
-
-                        <div class="subproject">
-                            <h6>E-commerce Platform Testing</h6>
-                            <ul class="subproject-features">
-                                <li>Validated complex payment processing systems</li>
-                                <li>Tested multi-brand order management workflows</li>
-                                <li>Ensured secure authentication across platforms</li>
-                                <li>Conducted end-to-end user journey testing</li>
-                                <li>Validated integration with third-party payment providers</li>
-                            </ul>
-                        </div>
-                    
-                    <div class="project-achievements">
-                        <h5>Key Achievements:</h5>
-                        <ul>
-                            <li>Reduced bug recurrence by 40% through process optimization</li>
-                            <li>Cut testing time by 50% via automation implementation</li>
-                            <li>Enhanced team efficiency by 25% through workflow analysis</li>
-                            <li>Successfully managed 5+ concurrent client projects</li>
-                        </ul>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-tag">Selenium Automation</span>
-                        <span class="tech-tag">E-commerce Testing</span>
-                        <span class="tech-tag">PWA Testing</span>
-                        <span class="tech-tag">Team Leadership</span>
-                        <span class="tech-tag">Process Documentation</span>
-                        <span class="tech-tag">Technical Manuals</span>
-                        <span class="tech-tag">Workflow Diagrams</span>
-                        <span class="tech-tag">Payment Systems</span>
-                        <span class="tech-tag">Integration Testing</span>
-                    </div>
-                </div>
-
-
-                <div class="project-card">
-                    <h4>Publishing Platform QA Systems</h4>
-                    <p class="project-role">Senior System QA Engineer | Media & Publishing Company | Aug 2016 - Aug 2018</p>
-                    <p class="project-description">Developed structured testing programs for digital publishing platforms and content management systems. Managed defect tracking and coordinated with technical teams to optimize QA processes for high-traffic editorial platforms.</p>
-                    <div class="project-subprojects">
-                        <div class="subproject">
-                            <h6>Automotive Classified Platform</h6>
-                            <ul class="subproject-features">
-                                <li>Classified listing management system testing</li>
-                                <li>Field data collection and validation workflows</li>
-                                <li>New and second-hand vehicle listing processes</li>
-                                <li>Client and supplier database management</li>
-                                <li>Sales reporting and analytics systems</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="subproject">
-                            <h6>Content Management Systems</h6>
-                            <ul class="subproject-features">
-                                <li>Editorial workflow and content publication</li>
-                                <li>SEO compliance and optimization testing</li>
-                                <li>Multi-user content management validation</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="project-achievements">
-                        <h5>Key Achievements:</h5>
-                        <ul>
-                            <li>Achieved 95% customer issue resolution rate</li>
-                            <li>Improved system stability through systematic defect documentation</li>
-                            <li>Ensured SEO compliance across publishing platforms</li>
-                            <li>Streamlined field data collection processes</li>
-                        </ul>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-tag">CMS Testing</span>
-                        <span class="tech-tag">SEO Validation</span>
-                        <span class="tech-tag">Database Management</span>
-                        <span class="tech-tag">High-Traffic Systems</span>
-                        <span class="tech-tag">Field Data Validation</span>
-                        <span class="tech-tag">System Documentation</span>
-                        <span class="tech-tag">Process Mapping</span>
-                        <span class="tech-tag">User Guides</span>
-                    </div>
-                    
-                    
-                    <div class="project-achievements">
-                        <h5>Key Achievements:</h5>
-                        <ul>
-                            <li>Achieved 95% customer issue resolution rate</li>
-                            <li>Improved system stability through systematic defect documentation</li>
-                            <li>Ensured SEO compliance across publishing platforms</li>
-                            <li>Provided technical QA training to team members</li>
-                            <li>Executed platform compatibility tests for seamless functionality</li>
-                        </ul>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-tag">Bug Tracking Tools</span>
-                        <span class="tech-tag">SEO Testing</span>
-                        <span class="tech-tag">Google Analytics Testing</span>
-                        <span class="tech-tag">Platform Testing</span>
-                        <span class="tech-tag">Technical Training</span>
-                        <span class="tech-tag">CMS Testing</span>
-                        <span class="tech-tag">Team Leadership</span>
-                    </div>
-                    
-                </div>
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center justify-center px-6 lg:px-8 pt-20">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="animate-fade-in-up">
+                <h1 class="text-6xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent">
+                    Senior QA Engineer
+                </h1>
+                <div class="typing-animation text-xl lg:text-2xl mb-8 text-gray-300">
+                    Technical Documentation Expert
                 </div>
             </div>
-        </section>
+            
+            <div class="animate-fade-in-up delay-200 mb-12">
+                <p class="text-lg lg:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                    Quality Assurance professional with <span class="text-purple-400 font-semibold">9+ years</span> of experience driving continuous improvement across healthcare, publishing, and digital platforms.
+                </p>
+            </div>
 
-        <section id="skills">
-            <h3>Technical Skills & Expertise</h3>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h4>🔧 Testing Tools & Platforms</h4>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span class="skill-name">Postman (API Testing)</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
+            <!-- Stats Cards -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12 animate-fade-in-up delay-400">
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="text-4xl font-bold text-green-400 mb-2">98%</div>
+                    <div class="text-sm text-gray-400">Defect Resolution Rate</div>
+                </div>
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="text-4xl font-bold text-blue-400 mb-2">50%</div>
+                    <div class="text-sm text-gray-400">Testing Time Reduction</div>
+                </div>
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="text-4xl font-bold text-purple-400 mb-2">35%</div>
+                    <div class="text-sm text-gray-400">Test Coverage Improvement</div>
+                </div>
+                <div class="glass rounded-xl p-6 card-hover">
+                    <div class="text-4xl font-bold text-pink-400 mb-2">3+</div>
+                    <div class="text-sm text-gray-400">Years AI Integration</div>
+                </div>
+            </div>
+
+            <!-- Tech Stack Banner -->
+            <div class="animate-fade-in-up delay-600 mb-12">
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span class="bg-gradient-to-r from-purple-500 to-purple-700 px-4 py-2 rounded-full text-sm">Selenium</span>
+                    <span class="bg-gradient-to-r from-blue-500 to-blue-700 px-4 py-2 rounded-full text-sm">Postman</span>
+                    <span class="bg-gradient-to-r from-green-500 to-green-700 px-4 py-2 rounded-full text-sm">Jira</span>
+                    <span class="bg-gradient-to-r from-red-500 to-red-700 px-4 py-2 rounded-full text-sm">MySQL</span>
+                    <span class="bg-gradient-to-r from-pink-500 to-pink-700 px-4 py-2 rounded-full text-sm">AI-Powered Testing</span>
+                </div>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="animate-fade-in-up delay-800 space-x-6">
+                <a href="#projects" class="inline-block bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 px-8 py-4 rounded-full font-semibold transition-all transform hover:scale-105 hover:shadow-lg">
+                    View My Work
+                </a>
+                <a href="#contact" class="inline-block border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-4 rounded-full font-semibold transition-all transform hover:scale-105">
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl lg:text-5xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                About Me
+            </h2>
+            <div class="glass rounded-2xl p-8">
+                <p class="text-lg text-gray-300 leading-relaxed">
+                    Detail-oriented QA Engineer with expertise in functional, regression, and automation testing across e-commerce, healthcare, and fintech domains. Passionate about integrating AI tools to optimize testing workflows and improve software quality.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl lg:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                Featured Projects
+            </h2>
+            
+            <div class="space-y-12">
+                <!-- Healthcare Platform Project -->
+                <div class="glass rounded-2xl p-8 card-hover">
+                    <div class="flex flex-col lg:flex-row gap-8">
+                        <div class="lg:w-1/3">
+                            <div class="w-20 h-20 bg-gradient-to-r from-green-400 to-blue-500 rounded-xl flex items-center justify-center mb-6">
+                                <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h4a1 1 0 010 2H6.414l2.293 2.293a1 1 0 11-1.414 1.414L5 6.414V8a1 1 0 01-2 0V4zm9 1a1 1 0 010-2h4a1 1 0 011 1v4a1 1 0 01-2 0V6.414l-2.293 2.293a1 1 0 11-1.414-1.414L13.586 5H12z" clip-rule="evenodd"/>
+                                </svg>
                             </div>
+                            <h3 class="text-2xl font-bold mb-4 text-white">Healthcare Platform Testing Suite</h3>
+                            <div class="text-sm text-purple-400 mb-2">Software QA / Technical Writer</div>
+                            <div class="text-sm text-gray-400 mb-6">Healthcare Tech Company | Oct 2021 - Present</div>
                         </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Selenium (Automation)</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 70%"></div>
+                        
+                        <div class="lg:w-2/3">
+                            <p class="text-gray-300 mb-6">
+                                Led comprehensive testing for multiple healthcare applications serving thousands of users daily, including patient-facing mobile/web apps and internal clinical tools for healthcare professionals.
+                            </p>
+                            
+                            <!-- Key Features -->
+                            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                                <div class="bg-gray-800/50 rounded-lg p-4">
+                                    <h4 class="font-semibold text-green-400 mb-2">Patient Portal Application</h4>
+                                    <ul class="text-sm text-gray-300 space-y-1">
+                                        <li>• Authentication & eligibility verification</li>
+                                        <li>• VoIP integration for teleconsultations</li>
+                                        <li>• Medical record access systems</li>
+                                        <li>• Cross-platform data validation</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-gray-800/50 rounded-lg p-4">
+                                    <h4 class="font-semibold text-blue-400 mb-2">Clinical Management Tools</h4>
+                                    <ul class="text-sm text-gray-300 space-y-1">
+                                        <li>• Healthcare assistant backend systems</li>
+                                        <li>• Medical professional frontend apps</li>
+                                        <li>• Case triage and termination workflows</li>
+                                        <li>• Real-time doctor scheduling</li>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">MySQL Database Testing</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 60%"></div>
+                            
+                            <!-- Achievements -->
+                            <div class="mb-6">
+                                <h4 class="font-semibold text-yellow-400 mb-3">Key Achievements:</h4>
+                                <div class="grid md:grid-cols-2 gap-3">
+                                    <div class="flex items-center space-x-2">
+                                        <div class="w-2 h-2 bg-green-400 rounded-full"></div>
+                                        <span class="text-sm text-gray-300">98% defect resolution rate</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+                                        <span class="text-sm text-gray-300">35% test coverage improvement</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <div class="w-2 h-2 bg-purple-400 rounded-full"></div>
+                                        <span class="text-sm text-gray-300">30% reduced onboarding time</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <div class="w-2 h-2 bg-pink-400 rounded-full"></div>
+                                        <span class="text-sm text-gray-300">Prevented critical data discrepancies</span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Playwright (Learning)</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 40%"></div>
+                            
+                            <!-- Tech Tags -->
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-xs">VoIP Testing</span>
+                                <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs">Mobile/Web Testing</span>
+                                <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-xs">MySQL Validation</span>
+                                <span class="bg-pink-500/20 text-pink-400 px-3 py-1 rounded-full text-xs">AI-Enhanced Testing</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <h4>🤖 AI-Enhanced Testing</h4>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span class="skill-name">Claude AI</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
+                <!-- Digital Platform Project -->
+                <div class="glass rounded-2xl p-8 card-hover">
+                    <div class="flex flex-col lg:flex-row gap-8">
+                        <div class="lg:w-1/3">
+                            <div class="w-20 h-20 bg-gradient-to-r from-purple-400 to-pink-500 rounded-xl flex items-center justify-center mb-6">
+                                <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                                </svg>
                             </div>
+                            <h3 class="text-2xl font-bold mb-4 text-white">Digital Platform QA Portfolio</h3>
+                            <div class="text-sm text-purple-400 mb-2">QA Supervisor</div>
+                            <div class="text-sm text-gray-400 mb-6">Digital Marketing Agency | Aug 2018 - Oct 2021</div>
                         </div>
-                        <div class="skill-item">
-                            <span class="skill-name">ChatGPT</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
+                        
+                        <div class="lg:w-2/3">
+                            <p class="text-gray-300 mb-6">
+                                Supervised comprehensive QA processes across multiple client projects, including e-commerce platforms, financial applications, progressive web apps, and enterprise automation systems.
+                            </p>
+                            
+                            <!-- Key Features -->
+                            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                                <div class="bg-gray-800/50 rounded-lg p-4">
+                                    <h4 class="font-semibold text-purple-400 mb-2">E-commerce Platform Suite</h4>
+                                    <ul class="text-sm text-gray-300 space-y-1">
+                                        <li>• Multi-brand food service testing</li>
+                                        <li>• Payment system validation</li>
+                                        <li>• Cross-platform compatibility</li>
+                                        <li>• User authentication workflows</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-gray-800/50 rounded-lg p-4">
+                                    <h4 class="font-semibold text-pink-400 mb-2">Financial Services App</h4>
+                                    <ul class="text-sm text-gray-300 space-y-1">
+                                        <li>• Credit card application testing</li>
+                                        <li>• End-to-end process validation</li>
+                                        <li>• Security and compliance testing</li>
+                                        <li>• Critical financial data validation</li>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">DeepSeek</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
+                            
+                            <!-- Achievements -->
+                            <div class="mb-6">
+                                <h4 class="font-semibold text-yellow-400 mb-3">Key Achievements:</h4>
+                                <div class="grid md:grid-cols-2 gap-3">
+                                    <div class="flex items-center space-x-2">
+                                        <div class="w-2 h-2 bg-green-400 rounded-full"></div>
+                                        <span class="text-sm text-gray-300">40% bug recurrence reduction</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+                                        <span class="text-sm text-gray-300">50% testing time reduction</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <div class="w-2 h-2 bg-purple-400 rounded-full"></div>
+                                        <span class="text-sm text-gray-300">25% team efficiency enhancement</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <div class="w-2 h-2 bg-pink-400 rounded-full"></div>
+                                        <span class="text-sm text-gray-300">5+ concurrent client projects</span>
+                                    </div>
+                                </div>
                             </div>
-                            <span class="skill-level">8/10</span>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">GitHub CoPilot</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
+                            
+                            <!-- Tech Tags -->
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-xs">Selenium Automation</span>
+                                <span class="bg-pink-500/20 text-pink-400 px-3 py-1 rounded-full text-xs">E-commerce Testing</span>
+                                <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs">PWA Testing</span>
+                                <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-xs">Team Leadership</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <h4>📋 Project Management & Documentation</h4>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span class="skill-name">Jira</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
+                <!-- Publishing Platform Project -->
+                <div class="glass rounded-2xl p-8 card-hover">
+                    <div class="flex flex-col lg:flex-row gap-8">
+                        <div class="lg:w-1/3">
+                            <div class="w-20 h-20 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-xl flex items-center justify-center mb-6">
+                                <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm0 2v8h12V6H4zm2 2h8v2H6V8zm0 4h4v2H6v-2z" clip-rule="evenodd"/>
+                                </svg>
                             </div>
+                            <h3 class="text-2xl font-bold mb-4 text-white">Publishing Platform QA Systems</h3>
+                            <div class="text-sm text-purple-400 mb-2">Senior System QA Engineer</div>
+                            <div class="text-sm text-gray-400 mb-6">Media & Publishing Company | Aug 2016 - Aug 2018</div>
                         </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Asana / ClickUp</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 75%"></div>
+                        
+                        <div class="lg:w-2/3">
+                            <p class="text-gray-300 mb-6">
+                                Developed structured testing programs for digital publishing platforms and content management systems. Managed defect tracking and coordinated with technical teams to optimize QA processes for high-traffic editorial platforms.
+                            </p>
+                            
+                            <!-- Key Features -->
+                            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                                <div class="bg-gray-800/50 rounded-lg p-4">
+                                    <h4 class="font-semibold text-yellow-400 mb-2">Automotive Classified Platform</h4>
+                                    <ul class="text-sm text-gray-300 space-y-1">
+                                        <li>• Classified listing management</li>
+                                        <li>• Field data collection workflows</li>
+                                        <li>• Vehicle listing processes</li>
+                                        <li>• Sales reporting systems</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-gray-800/50 rounded-lg p-4">
+                                    <h4 class="font-semibold text-orange-400 mb-2">Content Management Systems</h4>
+                                    <ul class="text-sm text-gray-300 space-y-1">
+                                        <li>• Editorial workflow testing</li>
+                                        <li>• SEO compliance validation</li>
+                                        <li>• Multi-user content management</li>
+                                        <li>• Content publication processes</li>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Miro (Workflow Design)</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
+                            
+                            <!-- Achievements -->
+                            <div class="mb-6">
+                                <h4 class="font-semibold text-yellow-400 mb-3">Key Achievements:</h4>
+                                <div class="grid md:grid-cols-2 gap-3">
+                                    <div class="flex items-center space-x-2">
+                                        <div class="w-2 h-2 bg-green-400 rounded-full"></div>
+                                        <span class="text-sm text-gray-300">95% customer issue resolution</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+                                        <span class="text-sm text-gray-300">Improved system stability</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <div class="w-2 h-2 bg-purple-400 rounded-full"></div>
+                                        <span class="text-sm text-gray-300">SEO compliance assurance</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <div class="w-2 h-2 bg-pink-400 rounded-full"></div>
+                                        <span class="text-sm text-gray-300">Streamlined data processes</span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Git Version Control</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 50%"></div>
+                            
+                            <!-- Tech Tags -->
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-xs">CMS Testing</span>
+                                <span class="bg-orange-500/20 text-orange-400 px-3 py-1 rounded-full text-xs">SEO Validation</span>
+                                <span class="bg-red-500/20 text-red-400 px-3 py-1 rounded-full text-xs">Database Management</span>
+                                <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-xs">High-Traffic Systems</span>
                             </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h4>🧪 Testing Specializations</h4>
-                    <ul class="specializations-list">
-                        <li><strong>Manual Testing:</strong> End-to-end web & mobile application testing</li>
-                        <li><strong>Automation Testing:</strong> Selenium framework implementation & maintenance</li>
-                        <li><strong>Cross-Browser Testing:</strong> Compatibility across major browsers & platforms</li>
-                        <li><strong>Mobile Compatibility:</strong> Responsive design & mobile app testing</li>
-                        <li><strong>Database Testing:</strong> SQL queries for data integrity validation</li>
-                        <li><strong>API Testing:</strong> RESTful service testing with Postman</li>
-                        <li><strong>Regression Testing:</strong> Systematic retesting of core functionalities</li>
-                        <li><strong>User Acceptance Testing:</strong> End-user experience validation</li>
-                    </ul>
-                </div>
-
-                <div class="skill-category">
-                    <h4>📄 Documentation & Processes</h4>
-                    <ul class="documentation-list">
-                        <li><strong>Test Plans:</strong> Comprehensive testing strategy documentation</li>
-                        <li><strong>Test Cases:</strong> Detailed scenario development & execution</li>
-                        <li><strong>RTM (Requirements Traceability Matrix):</strong> Coverage tracking & validation</li>
-                        <li><strong>Technical Documentation:</strong> User manuals & process documentation</li>
-                        <li><strong>Defect Reports:</strong> Systematic bug documentation & tracking</li>
-                        <li><strong>Flowcharts:</strong> Process visualization & workflow design</li>
-                        <li><strong>Test Reports:</strong> Comprehensive testing summary & analysis</li>
-                    </ul>
-                </div>
-
-                <div class="skill-category">
-                    <h4>🏢 Industry Experience</h4>
-                    <div class="industry-experience">
-                        <div class="industry-item">
-                            <h5>Healthcare Technology</h5>
-                            <p>3+ years - Healthcare platforms, medical data validation, compliance considerations, patient data security</p>
-                        </div>
-                        <div class="industry-item">
-                            <h5>Digital Publishing & Media</h5>
-                            <p>2+ years - Content management systems, SEO testing, editorial workflows, high-traffic platforms</p>
-                        </div>
-                        <div class="industry-item">
-                            <h5>E-commerce & Food Service</h5>
-                            <p>Project experience - Payment systems, order processing, user authentication, multi-brand platforms</p>
-                        </div>
-                        <div class="industry-item">
-                            <h5>Digital Marketing Platforms</h5>
-                            <p>3 years - Web applications, mobile platforms, automation frameworks, client project management</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2025 JPaola. All rights reserved.</p>
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl lg:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                Technical Skills & Expertise
+            </h2>
+            
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Testing Tools -->
+                <div class="glass rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold mb-6 text-purple-400">🔧 Testing Tools & Platforms</h3>
+                    <div class="space-y-4">
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-white">Claude AI</span>
+                                <span class="text-pink-400 text-sm">80%</span>
+                            </div>
+                            <div class="bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar-fill bg-gradient-to-r from-pink-400 to-pink-600 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-white">ChatGPT</span>
+                                <span class="text-green-400 text-sm">80%</span>
+                            </div>
+                            <div class="bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar-fill bg-gradient-to-r from-green-400 to-green-600 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-white">DeepSeek</span>
+                                <span class="text-purple-400 text-sm">80%</span>
+                            </div>
+                            <div class="bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar-fill bg-gradient-to-r from-purple-400 to-purple-600 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-white">GitHub CoPilot</span>
+                                <span class="text-blue-400 text-sm">75%</span>
+                            </div>
+                            <div class="bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar-fill bg-gradient-to-r from-blue-400 to-blue-600 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Management -->
+                <div class="glass rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold mb-6 text-blue-400">📋 Project Management & Documentation</h3>
+                    <div class="space-y-4">
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-white">Jira</span>
+                                <span class="text-blue-400 text-sm">80%</span>
+                            </div>
+                            <div class="bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar-fill bg-gradient-to-r from-blue-400 to-blue-600 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-white">Asana / ClickUp</span>
+                                <span class="text-green-400 text-sm">75%</span>
+                            </div>
+                            <div class="bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar-fill bg-gradient-to-r from-green-400 to-green-600 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-white">Miro (Workflow Design)</span>
+                                <span class="text-purple-400 text-sm">80%</span>
+                            </div>
+                            <div class="bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar-fill bg-gradient-to-r from-purple-400 to-purple-600 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-white">Git Version Control</span>
+                                <span class="text-red-400 text-sm">50%</span>
+                            </div>
+                            <div class="bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar-fill bg-gradient-to-r from-red-400 to-red-600 h-2 rounded-full" style="width: 50%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testing Specializations -->
+                <div class="glass rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold mb-6 text-green-400">🧪 Testing Specializations</h3>
+                    <div class="space-y-4">
+                        <div class="bg-gray-800/50 rounded-lg p-4">
+                            <h4 class="font-semibold text-green-400 mb-2">Manual Testing</h4>
+                            <p class="text-sm text-gray-300">End-to-end web & mobile application testing</p>
+                        </div>
+                        <div class="bg-gray-800/50 rounded-lg p-4">
+                            <h4 class="font-semibold text-blue-400 mb-2">Automation Testing</h4>
+                            <p class="text-sm text-gray-300">Selenium framework implementation & maintenance</p>
+                        </div>
+                        <div class="bg-gray-800/50 rounded-lg p-4">
+                            <h4 class="font-semibold text-purple-400 mb-2">Cross-Browser Testing</h4>
+                            <p class="text-sm text-gray-300">Compatibility across major browsers & platforms</p>
+                        </div>
+                        <div class="bg-gray-800/50 rounded-lg p-4">
+                            <h4 class="font-semibold text-pink-400 mb-2">API Testing</h4>
+                            <p class="text-sm text-gray-300">RESTful service testing with Postman</p>
+                        </div>
+                        <div class="bg-gray-800/50 rounded-lg p-4">
+                            <h4 class="font-semibold text-yellow-400 mb-2">Database Testing</h4>
+                            <p class="text-sm text-gray-300">SQL queries for data integrity validation</p>
+                        </div>
+                        <div class="bg-gray-800/50 rounded-lg p-4">
+                            <h4 class="font-semibold text-red-400 mb-2">User Acceptance Testing</h4>
+                            <p class="text-sm text-gray-300">End-user experience validation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Industry Experience -->
+            <div class="mt-12">
+                <h3 class="text-3xl font-bold text-center mb-8 text-yellow-400">🏢 Industry Experience</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="glass rounded-xl p-6 text-center card-hover">
+                        <div class="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 6a3 3 0 013-3h10a1 1 0 01.8 1.6L14.25 8l2.55 3.4A1 1 0 0116 13H6a1 1 0 00-1 1v3a1 1 0 11-2 0V6z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <h4 class="font-bold text-lg mb-2 text-green-400">Healthcare Technology</h4>
+                        <p class="text-sm text-gray-300 mb-2">3+ years</p>
+                        <p class="text-xs text-gray-400">Healthcare platforms, medical data validation, compliance</p>
+                    </div>
+                    
+                    <div class="glass rounded-xl p-6 text-center card-hover">
+                        <div class="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm0 2v8h12V6H4z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <h4 class="font-bold text-lg mb-2 text-purple-400">Digital Publishing</h4>
+                        <p class="text-sm text-gray-300 mb-2">2+ years</p>
+                        <p class="text-xs text-gray-400">CMS, SEO testing, editorial workflows, high-traffic platforms</p>
+                    </div>
+                    
+                    <div class="glass rounded-xl p-6 text-center card-hover">
+                        <div class="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 2L3 7v11a1 1 0 001 1h3a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h3a1 1 0 001-1V7l-7-5z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <h4 class="font-bold text-lg mb-2 text-yellow-400">E-commerce</h4>
+                        <p class="text-sm text-gray-300 mb-2">Project experience</p>
+                        <p class="text-xs text-gray-400">Payment systems, order processing, multi-brand platforms</p>
+                    </div>
+                    
+                    <div class="glass rounded-xl p-6 text-center card-hover">
+                        <div class="w-16 h-16 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <h4 class="font-bold text-lg mb-2 text-blue-400">Digital Marketing</h4>
+                        <p class="text-sm text-gray-300 mb-2">3 years</p>
+                        <p class="text-xs text-gray-400">Web applications, mobile platforms, automation frameworks</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl lg:text-5xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                Let's Work Together
+            </h2>
+            <div class="glass rounded-2xl p-8 mb-8">
+                <p class="text-lg text-gray-300 mb-8">
+                    Ready to elevate your software quality? Let's discuss how my QA expertise can help your team deliver exceptional user experiences.
+                </p>
+                <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+                    <a href="mailto:jane.paola@email.com" class="flex items-center space-x-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 px-6 py-3 rounded-full font-semibold transition-all transform hover:scale-105">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                        </svg>
+                        <span>Email Me</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-3 border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-6 py-3 rounded-full font-semibold transition-all transform hover:scale-105">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        <span>Download Resume</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6 lg:px-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-gray-400">&copy; 2025 Jane Paola. All rights reserved.</p>
+        </div>
     </footer>
+
+    <!-- JavaScript for animations and interactions -->
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections for animation
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            observer.observe(section);
+        });
+
+        // Skill bar animation on scroll
+        const skillObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const skillBars = entry.target.querySelectorAll('.skill-bar-fill');
+                    skillBars.forEach(bar => {
+                        const width = bar.style.width;
+                        bar.style.width = '0%';
+                        setTimeout(() => {
+                            bar.style.width = width;
+                        }, 500);
+                    });
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.glass').forEach(card => {
+            skillObserver.observe(card);
+        });
+
+        // Typing animation restart on scroll
+        function restartTypingAnimation() {
+            const typingElement = document.querySelector('.typing-animation');
+            if (typingElement) {
+                typingElement.style.animation = 'none';
+                typingElement.offsetHeight; // Trigger reflow
+                typingElement.style.animation = 'typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite';
+            }
+        }
+
+        // Restart typing animation when hero section comes into view
+        const heroObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    restartTypingAnimation();
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const heroSection = document.querySelector('#hero');
+        if (heroSection) {
+            heroObserver.observe(heroSection);
+        }
+
+        // Add floating animation to hero stats
+        document.querySelectorAll('.glass').forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.2}s`;
+            card.classList.add('animate-float');
+        });
+
+        // Mobile menu toggle (if needed)
+        const mobileMenuButton = document.querySelector('#mobile-menu-button');
+        const mobileMenu = document.querySelector('#mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
 </body>
 </html>
+                                <span class="text-white">Postman (API Testing)</span>
+                                <span class="text-purple-400 text-sm">80%</span>
+                            </div>
+                            <div class="bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar-fill bg-gradient-to-r from-purple-400 to-pink-400 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-white">Selenium (Automation)</span>
+                                <span class="text-blue-400 text-sm">70%</span>
+                            </div>
+                            <div class="bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar-fill bg-gradient-to-r from-blue-400 to-blue-600 h-2 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-white">MySQL Database Testing</span>
+                                <span class="text-green-400 text-sm">60%</span>
+                            </div>
+                            <div class="bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar-fill bg-gradient-to-r from-green-400 to-green-600 h-2 rounded-full" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-white">Playwright (Learning)</span>
+                                <span class="text-yellow-400 text-sm">40%</span>
+                            </div>
+                            <div class="bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar-fill bg-gradient-to-r from-yellow-400 to-yellow-600 h-2 rounded-full" style="width: 40%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Enhanced Testing -->
+                <div class="glass rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold mb-6 text-pink-400">🤖 AI-Enhanced Testing</h3>
+                    <div class="space-y-4">
+                        <div class="skill-item">
+                            <div class="flex justify-between items-center mb-2">
