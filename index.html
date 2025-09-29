@@ -13,6 +13,15 @@
             darkMode: 'class',
             theme: {
                 extend: {
+                    colors: {
+                        'primary-bg': '#1A1A1A',
+                        'accent-cyan': '#00D1FF',
+                        'accent-purple': '#6B46C1',
+                        'text-primary': '#F7FAFC',
+                        'text-secondary': '#CBD5E0',
+                        'success': '#2D8C6F',
+                        'warning': '#F6AD55'
+                    },
                     animation: {
                         'float': 'float 3s ease-in-out infinite',
                         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
@@ -39,9 +48,10 @@
     </script>
     <style>
         .gradient-bg {
-            background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #f5576c);
+            background: linear-gradient(-45deg, #1A1A1A, #2D3748, #00D1FF, #6B46C1);
             background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
+            animation: gradient 20s ease infinite;
+            opacity: 0.15;
         }
         
         @keyframes gradient {
@@ -51,9 +61,9 @@
         }
         
         .glass {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(30, 30, 30, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         .card-hover {
@@ -62,12 +72,12 @@
         
         .card-hover:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 209, 255, 0.2);
         }
         
         .typing-animation {
             overflow: hidden;
-            border-right: 2px solid #ffffff;
+            border-right: 2px solid #00D1FF;
             white-space: nowrap;
             animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
         }
@@ -79,7 +89,7 @@
         
         @keyframes blink-caret {
             from, to { border-color: transparent; }
-            50% { border-color: #ffffff; }
+            50% { border-color: #00D1FF; }
         }
         
         .skill-bar-fill {
@@ -87,23 +97,23 @@
         }
     </style>
 </head>
-<body class="bg-gray-900 text-white overflow-x-hidden dark:bg-gray-800 dark:text-gray-100 transition-colors duration-300">
+<body class="bg-primary-bg text-text-primary overflow-x-hidden dark:bg-gray-900 dark:text-text-primary transition-colors duration-300">
     <!-- Animated Background -->
-    <div class="fixed inset-0 gradient-bg opacity-20 -z-10"></div>
+    <div class="fixed inset-0 gradient-bg -z-10"></div>
     
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 glass" role="navigation" aria-label="Main navigation">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
-                <div class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                <div class="text-2xl font-bold text-cyan-400">
                     Jane Paola
                 </div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#hero" class="hover:text-purple-400 transition-colors" aria-label="Home">Home</a>
-                    <a href="#about" class="hover:text-purple-400 transition-colors" aria-label="About">About</a>
-                    <a href="#projects" class="hover:text-purple-400 transition-colors" aria-label="Projects">Projects</a>
-                    <a href="#skills" class="hover:text-purple-400 transition-colors" aria-label="Skills">Skills</a>
-                    <a href="#contact" class="hover:text-purple-400 transition-colors" aria-label="Contact">Contact</a>
+                    <a href="#hero" class="text-gray-300 hover:text-cyan-400 transition-colors" aria-label="Home">Home</a>
+                    <a href="#about" class="text-gray-300 hover:text-cyan-400 transition-colors" aria-label="About">About</a>
+                    <a href="#projects" class="text-gray-300 hover:text-cyan-400 transition-colors" aria-label="Projects">Projects</a>
+                    <a href="#skills" class="text-gray-300 hover:text-cyan-400 transition-colors" aria-label="Skills">Skills</a>
+                    <a href="#contact" class="text-gray-300 hover:text-cyan-400 transition-colors" aria-label="Contact">Contact</a>
                 </div>
                 <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none" aria-label="Toggle mobile menu">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -118,11 +128,11 @@
             </div>
             <div id="mobile-menu" class="md:hidden hidden">
                 <div class="flex flex-col space-y-4 py-4">
-                    <a href="#hero" class="hover:text-purple-400 transition-colors" aria-label="Home">Home</a>
-                    <a href="#about" class="hover:text-purple-400 transition-colors" aria-label="About">About</a>
-                    <a href="#projects" class="hover:text-purple-400 transition-colors" aria-label="Projects">Projects</a>
-                    <a href="#skills" class="hover:text-purple-400 transition-colors" aria-label="Skills">Skills</a>
-                    <a href="#contact" class="hover:text-purple-400 transition-colors" aria-label="Contact">Contact</a>
+                    <a href="#hero" class="text-gray-300 hover:text-cyan-400 transition-colors" aria-label="Home">Home</a>
+                    <a href="#about" class="text-gray-300 hover:text-cyan-400 transition-colors" aria-label="About">About</a>
+                    <a href="#projects" class="text-gray-300 hover:text-cyan-400 transition-colors" aria-label="Projects">Projects</a>
+                    <a href="#skills" class="text-gray-300 hover:text-cyan-400 transition-colors" aria-label="Skills">Skills</a>
+                    <a href="#contact" class="text-gray-300 hover:text-cyan-400 transition-colors" aria-label="Contact">Contact</a>
                 </div>
             </div>
         </div>
@@ -132,7 +142,7 @@
     <section id="hero" class="min-h-screen flex items-center justify-center px-6 lg:px-8 pt-20" role="region" aria-label="Hero section">
         <div class="max-w-6xl mx-auto text-center">
             <div class="animate-fade-in-up">
-                <h1 class="text-6xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent">
+                <h1 class="text-6xl lg:text-8xl font-bold mb-6 text-cyan-400">
                     Jane Paola
                 </h1>
                 <div class="typing-animation text-xl lg:text-2xl mb-8 text-gray-300 dark:text-gray-200">
@@ -142,26 +152,26 @@
             
             <div class="animate-fade-in-up delay-200 mb-12">
                 <p class="text-lg lg:text-xl text-gray-300 dark:text-gray-200 max-w-4xl mx-auto leading-relaxed">
-                    Quality Assurance professional with <span class="text-purple-400 font-semibold">9+ years</span> of experience driving continuous improvement across healthcare, publishing, and digital platforms.
+                    Quality Assurance professional with <span class="text-cyan-400 font-semibold">9+ years</span> of experience driving continuous improvement across healthcare, publishing, and digital platforms.
                 </p>
             </div>
 
             <!-- Stats Cards -->
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12 animate-fade-in-up delay-400">
                 <div class="glass rounded-xl p-6 card-hover">
-                    <div class="text-4xl font-bold text-green-400 mb-2">98%</div>
+                    <div class="text-4xl font-bold text-cyan-400 mb-2">98%</div>
                     <div class="text-sm text-gray-400 dark:text-gray-300">Defect Resolution Rate</div>
                 </div>
                 <div class="glass rounded-xl p-6 card-hover">
-                    <div class="text-4xl font-bold text-blue-400 mb-2">50%</div>
+                    <div class="text-4xl font-bold text-purple-600 mb-2">50%</div>
                     <div class="text-sm text-gray-400 dark:text-gray-300">Testing Time Reduction</div>
                 </div>
                 <div class="glass rounded-xl p-6 card-hover">
-                    <div class="text-4xl font-bold text-purple-400 mb-2">35%</div>
+                    <div class="text-4xl font-bold text-cyan-400 mb-2">35%</div>
                     <div class="text-sm text-gray-400 dark:text-gray-300">Test Coverage Improvement</div>
                 </div>
                 <div class="glass rounded-xl p-6 card-hover">
-                    <div class="text-4xl font-bold text-pink-400 mb-2">3+</div>
+                    <div class="text-4xl font-bold text-purple-600 mb-2">3+</div>
                     <div class="text-sm text-gray-400 dark:text-gray-300">Years AI Integration</div>
                 </div>
             </div>
@@ -169,20 +179,20 @@
             <!-- Tech Stack Banner -->
             <div class="animate-fade-in-up delay-600 mb-12">
                 <div class="flex flex-wrap justify-center gap-4">
-                    <span class="bg-gradient-to-r from-purple-500 to-purple-700 px-4 py-2 rounded-full text-sm">Selenium</span>
-                    <span class="bg-gradient-to-r from-blue-500 to-blue-700 px-4 py-2 rounded-full text-sm">Postman</span>
-                    <span class="bg-gradient-to-r from-green-500 to-green-700 px-4 py-2 rounded-full text-sm">Jira</span>
-                    <span class="bg-gradient-to-r from-red-500 to-red-700 px-4 py-2 rounded-full text-sm">MySQL</span>
-                    <span class="bg-gradient-to-r from-pink-500 to-pink-700 px-4 py-2 rounded-full text-sm">AI-Powered Testing</span>
+                    <span class="bg-gradient-to-r from-cyan-500 to-purple-600 px-4 py-2 rounded-full text-sm text-white">Selenium</span>
+                    <span class="bg-gradient-to-r from-cyan-500 to-purple-600 px-4 py-2 rounded-full text-sm text-white">Postman</span>
+                    <span class="bg-gradient-to-r from-cyan-500 to-purple-600 px-4 py-2 rounded-full text-sm text-white">Jira</span>
+                    <span class="bg-gradient-to-r from-cyan-500 to-purple-600 px-4 py-2 rounded-full text-sm text-white">MySQL</span>
+                    <span class="bg-gradient-to-r from-cyan-500 to-purple-600 px-4 py-2 rounded-full text-sm text-white">AI-Powered Testing</span>
                 </div>
             </div>
 
             <!-- CTA Buttons -->
             <div class="animate-fade-in-up delay-800 space-x-6">
-                <a href="#projects" class="inline-block bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 px-8 py-4 rounded-full font-semibold transition-all transform hover:scale-105 hover:shadow-lg" aria-label="View projects">
+                <a href="#projects" class="inline-block bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 px-8 py-4 rounded-full font-semibold transition-all transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/50" aria-label="View projects">
                     View My Work
                 </a>
-                <a href="#contact" class="inline-block border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-4 rounded-full font-semibold transition-all transform hover:scale-105" aria-label="Contact me">
+                <a href="#contact" class="inline-block border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900 px-8 py-4 rounded-full font-semibold transition-all transform hover:scale-105" aria-label="Contact me">
                     Get In Touch
                 </a>
             </div>
@@ -192,7 +202,7 @@
     <!-- About Section -->
     <section id="about" class="py-20 px-6 lg:px-8" role="region" aria-label="About section">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-4xl lg:text-5xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <h2 class="text-4xl lg:text-5xl font-bold mb-8 text-cyan-400">
                 About Me
             </h2>
             <div class="glass rounded-2xl p-8">
@@ -206,7 +216,7 @@
     <!-- Projects Section -->
     <section id="projects" class="py-20 px-6 lg:px-8" role="region" aria-label="Projects section">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl lg:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <h2 class="text-4xl lg:text-5xl font-bold text-center mb-16 text-cyan-400">
                 Featured Projects
             </h2>
             
@@ -215,13 +225,13 @@
                 <div class="glass rounded-2xl p-8 card-hover">
                     <div class="flex flex-col lg:flex-row gap-8">
                         <div class="lg:w-1/3">
-                            <div class="w-20 h-20 bg-gradient-to-r from-green-400 to-blue-500 rounded-xl flex items-center justify-center mb-6">
+                            <div class="w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
                                 <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h4a1 1 0 010 2H6.414l2.293 2.293a1 1 0 11-1.414 1.414L5 6.414V8a1 1 0 01-2 0V4zm9 1a1 1 0 010-2h4a1 1 0 011 1v4a1 1 0 01-2 0V6.414l-2.293 2.293a1 1 0 11-1.414-1.414L13.586 5H12z" clip-rule="evenodd"/>
                                 </svg>
                             </div>
                             <h3 class="text-2xl font-bold mb-4 text-white dark:text-gray-100">Healthcare Platform Testing Suite</h3>
-                            <div class="text-sm text-purple-400 mb-2">Software QA / Technical Writer</div>
+                            <div class="text-sm text-cyan-400 mb-2">Software QA / Technical Writer</div>
                             <div class="text-sm text-gray-400 dark:text-gray-300 mb-6">Healthcare Tech Company | Oct 2021 - Present</div>
                         </div>
                         
@@ -233,7 +243,7 @@
                             <!-- Key Features -->
                             <div class="grid md:grid-cols-2 gap-6 mb-6">
                                 <div class="bg-gray-800/50 rounded-lg p-4">
-                                    <h4 class="font-semibold text-green-400 mb-2">Patient Portal Application</h4>
+                                    <h4 class="font-semibold text-cyan-400 mb-2">Patient Portal Application</h4>
                                     <ul class="text-sm text-gray-300 dark:text-gray-200 space-y-1">
                                         <li>• Authentication & eligibility verification</li>
                                         <li>• VoIP integration for teleconsultations</li>
@@ -242,7 +252,7 @@
                                     </ul>
                                 </div>
                                 <div class="bg-gray-800/50 rounded-lg p-4">
-                                    <h4 class="font-semibold text-blue-400 mb-2">Clinical Management Tools</h4>
+                                    <h4 class="font-semibold text-purple-600 mb-2">Clinical Management Tools</h4>
                                     <ul class="text-sm text-gray-300 dark:text-gray-200 space-y-1">
                                         <li>• Healthcare assistant backend systems</li>
                                         <li>• Medical professional frontend apps</li>
@@ -254,22 +264,22 @@
                             
                             <!-- Achievements -->
                             <div class="mb-6">
-                                <h4 class="font-semibold text-yellow-400 mb-3">Key Achievements:</h4>
+                                <h4 class="font-semibold text-emerald-600 mb-3">Key Achievements:</h4>
                                 <div class="grid md:grid-cols-2 gap-3">
                                     <div class="flex items-center space-x-2">
-                                        <div class="w-2 h-2 bg-green-400 rounded-full"></div>
+                                        <div class="w-2 h-2 bg-emerald-600 rounded-full"></div>
                                         <span class="text-sm text-gray-300 dark:text-gray-200">98% defect resolution rate</span>
                                     </div>
                                     <div class="flex items-center space-x-2">
-                                        <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+                                        <div class="w-2 h-2 bg-emerald-600 rounded-full"></div>
                                         <span class="text-sm text-gray-300 dark:text-gray-200">35% test coverage improvement</span>
                                     </div>
                                     <div class="flex items-center space-x-2">
-                                        <div class="w-2 h-2 bg-purple-400 rounded-full"></div>
+                                        <div class="w-2 h-2 bg-emerald-600 rounded-full"></div>
                                         <span class="text-sm text-gray-300 dark:text-gray-200">30% reduced onboarding time</span>
                                     </div>
                                     <div class="flex items-center space-x-2">
-                                        <div class="w-2 h-2 bg-pink-400 rounded-full"></div>
+                                        <div class="w-2 h-2 bg-emerald-600 rounded-full"></div>
                                         <span class="text-sm text-gray-300 dark:text-gray-200">Prevented critical data discrepancies</span>
                                     </div>
                                 </div>
@@ -277,10 +287,10 @@
                             
                             <!-- Tech Tags -->
                             <div class="flex flex-wrap gap-2">
-                                <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-xs">VoIP Testing</span>
-                                <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs">Mobile/Web Testing</span>
-                                <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-xs">MySQL Validation</span>
-                                <span class="bg-pink-500/20 text-pink-400 px-3 py-1 rounded-full text-xs">AI-Enhanced Testing</span>
+                                <span class="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-xs">VoIP Testing</span>
+                                <span class="bg-purple-600/20 text-purple-600 px-3 py-1 rounded-full text-xs">Mobile/Web Testing</span>
+                                <span class="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-xs">MySQL Validation</span>
+                                <span class="bg-purple-600/20 text-purple-600 px-3 py-1 rounded-full text-xs">AI-Enhanced Testing</span>
                             </div>
                         </div>
                     </div>
@@ -290,13 +300,13 @@
                 <div class="glass rounded-2xl p-8 card-hover">
                     <div class="flex flex-col lg:flex-row gap-8">
                         <div class="lg:w-1/3">
-                            <div class="w-20 h-20 bg-gradient-to-r from-purple-400 to-pink-500 rounded-xl flex items-center justify-center mb-6">
+                            <div class="w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
                                 <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
                                 </svg>
                             </div>
                             <h3 class="text-2xl font-bold mb-4 text-white dark:text-gray-100">Digital Platform QA Portfolio</h3>
-                            <div class="text-sm text-purple-400 mb-2">QA Supervisor</div>
+                            <div class="text-sm text-cyan-400 mb-2">QA Supervisor</div>
                             <div class="text-sm text-gray-400 dark:text-gray-300 mb-6">Digital Marketing Agency | Aug 2018 - Oct 2021</div>
                         </div>
                         
@@ -308,7 +318,7 @@
                             <!-- Key Features -->
                             <div class="grid md:grid-cols-2 gap-6 mb-6">
                                 <div class="bg-gray-800/50 rounded-lg p-4">
-                                    <h4 class="font-semibold text-purple-400 mb-2">E-commerce Platform Suite</h4>
+                                    <h4 class="font-semibold text-cyan-400 mb-2">E-commerce Platform Suite</h4>
                                     <ul class="text-sm text-gray-300 dark:text-gray-200 space-y-1">
                                         <li>• Multi-brand food service testing</li>
                                         <li>• Payment system validation</li>
@@ -317,7 +327,7 @@
                                     </ul>
                                 </div>
                                 <div class="bg-gray-800/50 rounded-lg p-4">
-                                    <h4 class="font-semibold text-pink-400 mb-2">Financial Services App</h4>
+                                    <h4 class="font-semibold text-purple-600 mb-2">Financial Services App</h4>
                                     <ul class="text-sm text-gray-300 dark:text-gray-200 space-y-1">
                                         <li>• Credit card application testing</li>
                                         <li>• End-to-end process validation</li>
@@ -329,22 +339,22 @@
                             
                             <!-- Achievements -->
                             <div class="mb-6">
-                                <h4 class="font-semibold text-yellow-400 mb-3">Key Achievements:</h4>
+                                <h4 class="font-semibold text-emerald-600 mb-3">Key Achievements:</h4>
                                 <div class="grid md:grid-cols-2 gap-3">
                                     <div class="flex items-center space-x-2">
-                                        <div class="w-2 h-2 bg-green-400 rounded-full"></div>
+                                        <div class="w-2 h-2 bg-emerald-600 rounded-full"></div>
                                         <span class="text-sm text-gray-300 dark:text-gray-200">40% bug recurrence reduction</span>
                                     </div>
                                     <div class="flex items-center space-x-2">
-                                        <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+                                        <div class="w-2 h-2 bg-emerald-600 rounded-full"></div>
                                         <span class="text-sm text-gray-300 dark:text-gray-200">50% testing time reduction</span>
                                     </div>
                                     <div class="flex items-center space-x-2">
-                                        <div class="w-2 h-2 bg-purple-400 rounded-full"></div>
+                                        <div class="w-2 h-2 bg-emerald-600 rounded-full"></div>
                                         <span class="text-sm text-gray-300 dark:text-gray-200">25% team efficiency enhancement</span>
                                     </div>
                                     <div class="flex items-center space-x-2">
-                                        <div class="w-2 h-2 bg-pink-400 rounded-full"></div>
+                                        <div class="w-2 h-2 bg-emerald-600 rounded-full"></div>
                                         <span class="text-sm text-gray-300 dark:text-gray-200">5+ concurrent client projects</span>
                                     </div>
                                 </div>
@@ -352,10 +362,10 @@
                             
                             <!-- Tech Tags -->
                             <div class="flex flex-wrap gap-2">
-                                <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-xs">Selenium Automation</span>
-                                <span class="bg-pink-500/20 text-pink-400 px-3 py-1 rounded-full text-xs">E-commerce Testing</span>
-                                <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs">PWA Testing</span>
-                                <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-xs">Team Leadership</span>
+                                <span class="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-xs">Selenium Automation</span>
+                                <span class="bg-purple-600/20 text-purple-600 px-3 py-1 rounded-full text-xs">E-commerce Testing</span>
+                                <span class="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-xs">PWA Testing</span>
+                                <span class="bg-purple-600/20 text-purple-600 px-3 py-1 rounded-full text-xs">Team Leadership</span>
                             </div>
                         </div>
                     </div>
@@ -365,13 +375,13 @@
                 <div class="glass rounded-2xl p-8 card-hover">
                     <div class="flex flex-col lg:flex-row gap-8">
                         <div class="lg:w-1/3">
-                            <div class="w-20 h-20 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-xl flex items-center justify-center mb-6">
+                            <div class="w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
                                 <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm0 2v8h12V6H4zm2 2h8v2H6V8zm0 4h4v2H6v-2z" clip-rule="evenodd"/>
                                 </svg>
                             </div>
                             <h3 class="text-2xl font-bold mb-4 text-white dark:text-gray-100">Publishing Platform QA Systems</h3>
-                            <div class="text-sm text-purple-400 mb-2">Senior System QA Engineer</div>
+                            <div class="text-sm text-cyan-400 mb-2">Senior System QA Engineer</div>
                             <div class="text-sm text-gray-400 dark:text-gray-300 mb-6">Media & Publishing Company | Aug 2016 - Aug 2018</div>
                         </div>
                         
@@ -383,7 +393,7 @@
                             <!-- Key Features -->
                             <div class="grid md:grid-cols-2 gap-6 mb-6">
                                 <div class="bg-gray-800/50 rounded-lg p-4">
-                                    <h4 class="font-semibold text-yellow-400 mb-2">Automotive Classified Platform</h4>
+                                    <h4 class="font-semibold text-cyan-400 mb-2">Automotive Classified Platform</h4>
                                     <ul class="text-sm text-gray-300 dark:text-gray-200 space-y-1">
                                         <li>• Classified listing management</li>
                                         <li>• Field data collection workflows</li>
@@ -392,7 +402,7 @@
                                     </ul>
                                 </div>
                                 <div class="bg-gray-800/50 rounded-lg p-4">
-                                    <h4 class="font-semibold text-orange-400 mb-2">Content Management Systems</h4>
+                                    <h4 class="font-semibold text-purple-600 mb-2">Content Management Systems</h4>
                                     <ul class="text-sm text-gray-300 dark:text-gray-200 space-y-1">
                                         <li>• Editorial workflow testing</li>
                                         <li>• SEO compliance validation</li>
@@ -404,22 +414,22 @@
                             
                             <!-- Achievements -->
                             <div class="mb-6">
-                                <h4 class="font-semibold text-yellow-400 mb-3">Key Achievements:</h4>
+                                <h4 class="font-semibold text-emerald-600 mb-3">Key Achievements:</h4>
                                 <div class="grid md:grid-cols-2 gap-3">
                                     <div class="flex items-center space-x-2">
-                                        <div class="w-2 h-2 bg-green-400 rounded-full"></div>
+                                        <div class="w-2 h-2 bg-emerald-600 rounded-full"></div>
                                         <span class="text-sm text-gray-300 dark:text-gray-200">95% customer issue resolution</span>
                                     </div>
                                     <div class="flex items-center space-x-2">
-                                        <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+                                        <div class="w-2 h-2 bg-emerald-600 rounded-full"></div>
                                         <span class="text-sm text-gray-300 dark:text-gray-200">Improved system stability</span>
                                     </div>
                                     <div class="flex items-center space-x-2">
-                                        <div class="w-2 h-2 bg-purple-400 rounded-full"></div>
+                                        <div class="w-2 h-2 bg-emerald-600 rounded-full"></div>
                                         <span class="text-sm text-gray-300 dark:text-gray-200">SEO compliance assurance</span>
                                     </div>
                                     <div class="flex items-center space-x-2">
-                                        <div class="w-2 h-2 bg-pink-400 rounded-full"></div>
+                                        <div class="w-2 h-2 bg-emerald-600 rounded-full"></div>
                                         <span class="text-sm text-gray-300 dark:text-gray-200">Streamlined data processes</span>
                                     </div>
                                 </div>
@@ -427,10 +437,10 @@
                             
                             <!-- Tech Tags -->
                             <div class="flex flex-wrap gap-2">
-                                <span class="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-xs">CMS Testing</span>
-                                <span class="bg-orange-500/20 text-orange-400 px-3 py-1 rounded-full text-xs">SEO Validation</span>
-                                <span class="bg-red-500/20 text-red-400 px-3 py-1 rounded-full text-xs">Database Management</span>
-                                <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-xs">High-Traffic Systems</span>
+                                <span class="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-xs">CMS Testing</span>
+                                <span class="bg-purple-600/20 text-purple-600 px-3 py-1 rounded-full text-xs">SEO Validation</span>
+                                <span class="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-xs">Database Management</span>
+                                <span class="bg-purple-600/20 text-purple-600 px-3 py-1 rounded-full text-xs">High-Traffic Systems</span>
                             </div>
                         </div>
                     </div>
@@ -442,49 +452,49 @@
     <!-- Skills Section -->
     <section id="skills" class="py-20 px-6 lg:px-8" role="region" aria-label="Skills section">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl lg:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <h2 class="text-4xl lg:text-5xl font-bold text-center mb-16 text-cyan-400">
                 Technical Skills & Expertise
             </h2>
             
             <div class="grid lg:grid-cols-2 gap-8">
                 <!-- Testing Tools -->
                 <div class="glass rounded-2xl p-8">
-                    <h3 class="text-2xl font-bold mb-6 text-purple-400">🔧 Testing Tools & Platforms</h3>
+                    <h3 class="text-2xl font-bold mb-6 text-cyan-400">🔧 Testing Tools & Platforms</h3>
                     <div class="space-y-4">
                         <div class="skill-item">
                             <div class="flex justify-between items-center mb-2">
                                 <span class="text-white dark:text-gray-100">Postman (API Testing)</span>
-                                <span class="text-purple-400 text-sm">80%</span>
+                                <span class="text-emerald-600 text-sm">80%</span>
                             </div>
                             <div class="bg-gray-700 dark:bg-gray-600 rounded-full h-2">
-                                <div class="skill-bar-fill bg-gradient-to-r from-purple-400 to-pink-400 h-2 rounded-full" style="width: 80%"></div>
+                                <div class="skill-bar-fill bg-gradient-to-r from-emerald-600 to-emerald-800 h-2 rounded-full" style="width: 80%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
                             <div class="flex justify-between items-center mb-2">
                                 <span class="text-white dark:text-gray-100">Selenium (Automation)</span>
-                                <span class="text-blue-400 text-sm">70%</span>
+                                <span class="text-emerald-600 text-sm">70%</span>
                             </div>
                             <div class="bg-gray-700 dark:bg-gray-600 rounded-full h-2">
-                                <div class="skill-bar-fill bg-gradient-to-r from-blue-400 to-blue-600 h-2 rounded-full" style="width: 70%"></div>
+                                <div class="skill-bar-fill bg-gradient-to-r from-emerald-600 to-emerald-800 h-2 rounded-full" style="width: 70%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
                             <div class="flex justify-between items-center mb-2">
                                 <span class="text-white dark:text-gray-100">MySQL Database Testing</span>
-                                <span class="text-green-400 text-sm">60%</span>
+                                <span class="text-emerald-600 text-sm">60%</span>
                             </div>
                             <div class="bg-gray-700 dark:bg-gray-600 rounded-full h-2">
-                                <div class="skill-bar-fill bg-gradient-to-r from-green-400 to-green-600 h-2 rounded-full" style="width: 60%"></div>
+                                <div class="skill-bar-fill bg-gradient-to-r from-emerald-600 to-emerald-800 h-2 rounded-full" style="width: 60%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
                             <div class="flex justify-between items-center mb-2">
                                 <span class="text-white dark:text-gray-100">Playwright (Learning)</span>
-                                <span class="text-yellow-400 text-sm">40%</span>
+                                <span class="text-amber-400 text-sm">40%</span>
                             </div>
                             <div class="bg-gray-700 dark:bg-gray-600 rounded-full h-2">
-                                <div class="skill-bar-fill bg-gradient-to-r from-yellow-400 to-yellow-600 h-2 rounded-full" style="width: 40%"></div>
+                                <div class="skill-bar-fill bg-gradient-to-r from-amber-400 to-amber-600 h-2 rounded-full" style="width: 40%"></div>
                             </div>
                         </div>
                     </div>
@@ -492,42 +502,42 @@
 
                 <!-- AI Enhanced Testing -->
                 <div class="glass rounded-2xl p-8">
-                    <h3 class="text-2xl font-bold mb-6 text-pink-400">🤖 AI-Enhanced Testing</h3>
+                    <h3 class="text-2xl font-bold mb-6 text-purple-600">🤖 AI-Enhanced Testing</h3>
                     <div class="space-y-4">
                         <div class="skill-item">
                             <div class="flex justify-between items-center mb-2">
                                 <span class="text-white dark:text-gray-100">Claude AI</span>
-                                <span class="text-pink-400 text-sm">80%</span>
+                                <span class="text-emerald-600 text-sm">80%</span>
                             </div>
                             <div class="bg-gray-700 dark:bg-gray-600 rounded-full h-2">
-                                <div class="skill-bar-fill bg-gradient-to-r from-pink-400 to-pink-600 h-2 rounded-full" style="width: 80%"></div>
+                                <div class="skill-bar-fill bg-gradient-to-r from-emerald-600 to-emerald-800 h-2 rounded-full" style="width: 80%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
                             <div class="flex justify-between items-center mb-2">
                                 <span class="text-white dark:text-gray-100">ChatGPT</span>
-                                <span class="text-green-400 text-sm">80%</span>
+                                <span class="text-emerald-600 text-sm">80%</span>
                             </div>
                             <div class="bg-gray-700 dark:bg-gray-600 rounded-full h-2">
-                                <div class="skill-bar-fill bg-gradient-to-r from-green-400 to-green-600 h-2 rounded-full" style="width: 80%"></div>
+                                <div class="skill-bar-fill bg-gradient-to-r from-emerald-600 to-emerald-800 h-2 rounded-full" style="width: 80%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
                             <div class="flex justify-between items-center mb-2">
                                 <span class="text-white dark:text-gray-100">DeepSeek</span>
-                                <span class="text-purple-400 text-sm">80%</span>
+                                <span class="text-emerald-600 text-sm">80%</span>
                             </div>
                             <div class="bg-gray-700 dark:bg-gray-600 rounded-full h-2">
-                                <div class="skill-bar-fill bg-gradient-to-r from-purple-400 to-purple-600 h-2 rounded-full" style="width: 80%"></div>
+                                <div class="skill-bar-fill bg-gradient-to-r from-emerald-600 to-emerald-800 h-2 rounded-full" style="width: 80%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
                             <div class="flex justify-between items-center mb-2">
                                 <span class="text-white dark:text-gray-100">GitHub CoPilot</span>
-                                <span class="text-blue-400 text-sm">75%</span>
+                                <span class="text-emerald-600 text-sm">75%</span>
                             </div>
                             <div class="bg-gray-700 dark:bg-gray-600 rounded-full h-2">
-                                <div class="skill-bar-fill bg-gradient-to-r from-blue-400 to-blue-600 h-2 rounded-full" style="width: 75%"></div>
+                                <div class="skill-bar-fill bg-gradient-to-r from-emerald-600 to-emerald-800 h-2 rounded-full" style="width: 75%"></div>
                             </div>
                         </div>
                     </div>
@@ -535,42 +545,42 @@
 
                 <!-- Project Management -->
                 <div class="glass rounded-2xl p-8">
-                    <h3 class="text-2xl font-bold mb-6 text-blue-400">📋 Project Management & Documentation</h3>
+                    <h3 class="text-2xl font-bold mb-6 text-cyan-400">📋 Project Management & Documentation</h3>
                     <div class="space-y-4">
                         <div class="skill-item">
                             <div class="flex justify-between items-center mb-2">
                                 <span class="text-white dark:text-gray-100">Jira</span>
-                                <span class="text-blue-400 text-sm">80%</span>
+                                <span class="text-emerald-600 text-sm">80%</span>
                             </div>
                             <div class="bg-gray-700 dark:bg-gray-600 rounded-full h-2">
-                                <div class="skill-bar-fill bg-gradient-to-r from-blue-400 to-blue-600 h-2 rounded-full" style="width: 80%"></div>
+                                <div class="skill-bar-fill bg-gradient-to-r from-emerald-600 to-emerald-800 h-2 rounded-full" style="width: 80%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
                             <div class="flex justify-between items-center mb-2">
                                 <span class="text-white dark:text-gray-100">Asana / ClickUp</span>
-                                <span class="text-green-400 text-sm">75%</span>
+                                <span class="text-emerald-600 text-sm">75%</span>
                             </div>
                             <div class="bg-gray-700 dark:bg-gray-600 rounded-full h-2">
-                                <div class="skill-bar-fill bg-gradient-to-r from-green-400 to-green-600 h-2 rounded-full" style="width: 75%"></div>
+                                <div class="skill-bar-fill bg-gradient-to-r from-emerald-600 to-emerald-800 h-2 rounded-full" style="width: 75%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
                             <div class="flex justify-between items-center mb-2">
                                 <span class="text-white dark:text-gray-100">Miro (Workflow Design)</span>
-                                <span class="text-purple-400 text-sm">80%</span>
+                                <span class="text-emerald-600 text-sm">80%</span>
                             </div>
                             <div class="bg-gray-700 dark:bg-gray-600 rounded-full h-2">
-                                <div class="skill-bar-fill bg-gradient-to-r from-purple-400 to-purple-600 h-2 rounded-full" style="width: 80%"></div>
+                                <div class="skill-bar-fill bg-gradient-to-r from-emerald-600 to-emerald-800 h-2 rounded-full" style="width: 80%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
                             <div class="flex justify-between items-center mb-2">
                                 <span class="text-white dark:text-gray-100">Git Version Control</span>
-                                <span class="text-red-400 text-sm">50%</span>
+                                <span class="text-emerald-600 text-sm">50%</span>
                             </div>
                             <div class="bg-gray-700 dark:bg-gray-600 rounded-full h-2">
-                                <div class="skill-bar-fill bg-gradient-to-r from-red-400 to-red-600 h-2 rounded-full" style="width: 50%"></div>
+                                <div class="skill-bar-fill bg-gradient-to-r from-emerald-600 to-emerald-800 h-2 rounded-full" style="width: 50%"></div>
                             </div>
                         </div>
                     </div>
@@ -578,30 +588,30 @@
 
                 <!-- Testing Specializations -->
                 <div class="glass rounded-2xl p-8">
-                    <h3 class="text-2xl font-bold mb-6 text-green-400">🧪 Testing Specializations</h3>
+                    <h3 class="text-2xl font-bold mb-6 text-purple-600">🧪 Testing Specializations</h3>
                     <div class="space-y-4">
                         <div class="bg-gray-800/50 dark:bg-gray-700/50 rounded-lg p-4">
-                            <h4 class="font-semibold text-green-400 mb-2">Manual Testing</h4>
+                            <h4 class="font-semibold text-cyan-400 mb-2">Manual Testing</h4>
                             <p class="text-sm text-gray-300 dark:text-gray-200">End-to-end web & mobile application testing</p>
                         </div>
                         <div class="bg-gray-800/50 dark:bg-gray-700/50 rounded-lg p-4">
-                            <h4 class="font-semibold text-blue-400 mb-2">Automation Testing</h4>
+                            <h4 class="font-semibold text-purple-600 mb-2">Automation Testing</h4>
                             <p class="text-sm text-gray-300 dark:text-gray-200">Selenium framework implementation & maintenance</p>
                         </div>
                         <div class="bg-gray-800/50 dark:bg-gray-700/50 rounded-lg p-4">
-                            <h4 class="font-semibold text-purple-400 mb-2">Cross-Browser Testing</h4>
+                            <h4 class="font-semibold text-cyan-400 mb-2">Cross-Browser Testing</h4>
                             <p class="text-sm text-gray-300 dark:text-gray-200">Compatibility across major browsers & platforms</p>
                         </div>
                         <div class="bg-gray-800/50 dark:bg-gray-700/50 rounded-lg p-4">
-                            <h4 class="font-semibold text-pink-400 mb-2">API Testing</h4>
+                            <h4 class="font-semibold text-purple-600 mb-2">API Testing</h4>
                             <p class="text-sm text-gray-300 dark:text-gray-200">RESTful service testing with Postman</p>
                         </div>
                         <div class="bg-gray-800/50 dark:bg-gray-700/50 rounded-lg p-4">
-                            <h4 class="font-semibold text-yellow-400 mb-2">Database Testing</h4>
+                            <h4 class="font-semibold text-cyan-400 mb-2">Database Testing</h4>
                             <p class="text-sm text-gray-300 dark:text-gray-200">SQL queries for data integrity validation</p>
                         </div>
                         <div class="bg-gray-800/50 dark:bg-gray-700/50 rounded-lg p-4">
-                            <h4 class="font-semibold text-red-400 mb-2">User Acceptance Testing</h4>
+                            <h4 class="font-semibold text-purple-600 mb-2">User Acceptance Testing</h4>
                             <p class="text-sm text-gray-300 dark:text-gray-200">End-user experience validation</p>
                         </div>
                     </div>
@@ -610,202 +620,46 @@
 
             <!-- Industry Experience -->
             <div class="mt-12">
-                <h3 class="text-3xl font-bold text-center mb-8 text-yellow-400">🏢 Industry Experience</h3>
+                <h3 class="text-3xl font-bold text-center mb-8 text-emerald-600">🏢 Industry Experience</h3>
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                     <div class="glass rounded-xl p-6 text-center card-hover">
-                        <div class="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                             <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M3 6a3 3 0 013-3h10a1 1 0 01.8 1.6L14.25 8l2.55 3.4A1 1 0 0116 13H6a1 1 0 00-1 1v3a1 1 0 11-2 0V6z" clip-rule="evenodd"/>
                             </svg>
                         </div>
-                        <h4 class="font-bold text-lg mb-2 text-green-400">Healthcare Technology</h4>
+                        <h4 class="font-bold text-lg mb-2 text-cyan-400">Healthcare Technology</h4>
                         <p class="text-sm text-gray-300 dark:text-gray-200 mb-2">3+ years</p>
                         <p class="text-xs text-gray-400 dark:text-gray-300">Healthcare platforms, medical data validation, compliance</p>
                     </div>
                     
                     <div class="glass rounded-xl p-6 text-center card-hover">
-                        <div class="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                             <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm0 2v8h12V6H4z" clip-rule="evenodd"/>
                             </svg>
                         </div>
-                        <h4 class="font-bold text-lg mb-2 text-purple-400">Digital Publishing</h4>
+                        <h4 class="font-bold text-lg mb-2 text-purple-600">Digital Publishing</h4>
                         <p class="text-sm text-gray-300 dark:text-gray-200 mb-2">2+ years</p>
                         <p class="text-xs text-gray-400 dark:text-gray-300">CMS, SEO testing, editorial workflows, high-traffic platforms</p>
                     </div>
                     
                     <div class="glass rounded-xl p-6 text-center card-hover">
-                        <div class="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                             <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M10 2L3 7v11a1 1 0 001 1h3a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h3a1 1 0 001-1V7l-7-5z" clip-rule="evenodd"/>
                             </svg>
                         </div>
-                        <h4 class="font-bold text-lg mb-2 text-yellow-400">E-commerce</h4>
+                        <h4 class="font-bold text-lg mb-2 text-cyan-400">E-commerce</h4>
                         <p class="text-sm text-gray-300 dark:text-gray-200 mb-2">Project experience</p>
                         <p class="text-xs text-gray-400 dark:text-gray-300">Payment systems, order processing, multi-brand platforms</p>
                     </div>
                     
                     <div class="glass rounded-xl p-6 text-center card-hover">
-                        <div class="w-16 h-16 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                             <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
                             </svg>
                         </div>
-                        <h4 class="font-bold text-lg mb-2 text-blue-400">Digital Marketing</h4>
-                        <p class="text-sm text-gray-300 dark:text-gray-200 mb-2">3 years</p>
-                        <p class="text-xs text-gray-400 dark:text-gray-300">Web applications, mobile platforms, automation frameworks</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 px-6 lg:px-8" role="region" aria-label="Contact section">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-4xl lg:text-5xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Let's Work Together
-            </h2>
-            <div class="glass rounded-2xl p-8 mb-8">
-                <p class="text-lg text-gray-300 dark:text-gray-200 mb-8">
-                    Ready to elevate your software quality? Let's talk about how my QA expertise can help your team deliver exceptional user experiences.
-                </p>
-                <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
-                    <a href="mailto:janesoriano09@gmail.com" class="flex items-center space-x-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 px-6 py-3 rounded-full font-semibold transition-all transform hover:scale-105" aria-label="Email Jane Paola">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
-                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
-                        </svg>
-                        <span>Email Me</span>
-                    </a>                  
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-8 px-6 lg:px-8 border-t border-gray-800 dark:border-gray-700">
-        <div class="max-w-7xl mx-auto text-center">
-            <p class="text-gray-400 dark:text-gray-300">&copy; 2025 Jane Paola. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <!-- JavaScript for animations and interactions -->
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Mobile menu toggle
-        const mobileMenuButton = document.querySelector('#mobile-menu-button');
-        const mobileMenu = document.querySelector('#mobile-menu');
-        if (mobileMenuButton && mobileMenu) {
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-        }
-
-        // Dark mode toggle
-        const themeToggle = document.querySelector('#theme-toggle');
-        if (themeToggle) {
-            themeToggle.addEventListener('click', () => {
-                document.body.classList.toggle('dark');
-                localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
-            });
-            // Load saved theme
-            if (localStorage.getItem('theme') === 'dark') {
-                document.body.classList.add('dark');
-            }
-        }
-
-        // Intersection Observer for fade-in animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe all sections for animation
-        document.querySelectorAll('section').forEach(section => {
-            section.style.opacity = '0';
-            section.style.transform = 'translateY(30px)';
-            section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-            observer.observe(section);
-        });
-
-        // Skill bar animation on scroll
-        const skillObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const skillBars = entry.target.querySelectorAll('.skill-bar-fill');
-                    skillBars.forEach(bar => {
-                        const width = bar.style.width;
-                        bar.style.width = '0%';
-                        setTimeout(() => {
-                            bar.style.width = width;
-                        }, 500);
-                    });
-                }
-            });
-        }, { threshold: 0.5 });
-
-        document.querySelectorAll('.glass').forEach(card => {
-            skillObserver.observe(card);
-        });
-
-        // Typing animation restart on scroll
-        function restartTypingAnimation() {
-            const typingElement = document.querySelector('.typing-animation');
-            if (typingElement) {
-                typingElement.style.animation = 'none';
-                typingElement.offsetHeight; // Trigger reflow
-                typingElement.style.animation = 'typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite';
-            }
-        }
-
-        // Restart typing animation when hero section comes into view
-        const heroObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    restartTypingAnimation();
-                }
-            });
-        }, { threshold: 0.5 });
-
-        const heroSection = document.querySelector('#hero');
-        if (heroSection) {
-            heroObserver.observe(heroSection);
-        }
-
-        // Add floating animation to hero stats
-        document.querySelectorAll('.glass').forEach((card, index) => {
-            card.style.animationDelay = `${index * 0.2}s`;
-            card.classList.add('animate-float');
-        });
-
-        // Keyboard navigation support
-        document.querySelectorAll('a, button').forEach(element => {
-            element.addEventListener('focus', () => {
-                element.classList.add('ring-2', 'ring-purple-400');
-            });
-            element.addEventListener('blur', () => {
-                element.classList.remove('ring-2', 'ring-purple-400');
-            });
-        });
-    </script>
-</body>
-</html>
+                        <h4 class="font-bold text-lg mb-2 text-purple-600">Digital Marketing</h4>
+                        <p class="text-sm text-gray
