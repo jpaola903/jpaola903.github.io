@@ -23,7 +23,6 @@
             --secondary-dark: #1E293B;
         }
 
-        /* Premium Background */
         body {
             background: linear-gradient(135deg, #0F172A 0%, #1E293B 25%, #334155 50%, #1E293B 75%, #0F172A 100%);
             background-size: 400% 400%;
@@ -52,7 +51,6 @@
             50% { background-position: 100% 50%; }
         }
 
-        /* Premium Glass Effect */
         .glass {
             background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(20px);
@@ -72,7 +70,6 @@
                 0 0 40px rgba(212, 175, 55, 0.1);
         }
 
-        /* Premium Hover Effects */
         .card-hover {
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -84,7 +81,6 @@
                 0 0 60px rgba(212, 175, 55, 0.2);
         }
 
-        /* Premium Button Effects */
         .btn-premium {
             background: linear-gradient(135deg, #D4AF37 0%, #CD7F32 100%);
             box-shadow: 
@@ -117,7 +113,6 @@
                 inset 0 1px 0 rgba(255, 255, 255, 0.3);
         }
 
-        /* Animated Skill Bars */
         .skill-bar-fill {
             width: 0;
             animation: fillBar 2s ease-out forwards;
@@ -128,7 +123,6 @@
             to { width: var(--skill-width); }
         }
 
-        /* Premium Flip Cards */
         .flip-card {
             perspective: 1000px;
         }
@@ -162,7 +156,6 @@
             background: rgba(212, 175, 55, 0.1);
         }
 
-        /* Premium Text Animations */
         .text-shimmer {
             background: linear-gradient(90deg, #D4AF37, #CD7F32, #D4AF37);
             background-size: 200% 100%;
@@ -177,7 +170,6 @@
             50% { background-position: 100% 50%; }
         }
 
-        /* Floating Elements */
         .floating {
             animation: float 6s ease-in-out infinite;
         }
@@ -187,14 +179,12 @@
             50% { transform: translateY(-20px); }
         }
 
-        /* Premium Navigation */
         .nav-glass {
             background: rgba(15, 23, 42, 0.8);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(212, 175, 55, 0.2);
         }
 
-        /* Scroll Animations */
         .fade-in-up {
             opacity: 0;
             transform: translateY(30px);
@@ -208,12 +198,10 @@
             }
         }
 
-        /* Premium Icons */
         .icon-glow {
             filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.5));
         }
 
-        /* Particle Effect */
         .particles {
             position: fixed;
             top: 0;
@@ -250,7 +238,6 @@
             }
         }
 
-        /* Premium Scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -268,7 +255,6 @@
             background: linear-gradient(135deg, #CD7F32, #D4AF37);
         }
 
-        /* Chibi Character Styles */
         .chibi-container {
             position: fixed;
             bottom: 20px;
@@ -364,6 +350,34 @@
             }
         }
 
+        .chibi-mouth-excited {
+            animation: mouthExcited 0.6s ease-in-out infinite !important;
+        }
+
+        @keyframes mouthExcited {
+            0%, 100% { 
+                d: path("M52 58 Q60 65 68 58");
+            }
+            50% { 
+                d: path("M52 59 Q60 66 68 59");
+            }
+        }
+
+        .chibi-eyes-sparkle {
+            animation: eyesSparkle 0.8s ease-in-out infinite;
+        }
+
+        @keyframes eyesSparkle {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+        }
+
+        .chibi-speech-bubble.email-hover {
+            opacity: 1 !important;
+            transform: scale(1) translateY(0) !important;
+            animation: none !important;
+        }
+
         .chibi-hair-flow {
             animation: hairFlow 4s ease-in-out infinite;
             transform-origin: center top;
@@ -416,7 +430,6 @@
             50% { opacity: 0.8; transform: scale(1.2); }
         }
 
-        /* Responsive chibi */
         @media (max-width: 768px) {
             .chibi-container {
                 bottom: 15px;
@@ -436,7 +449,6 @@
             }
         }
 
-        /* Enhanced Typography */
         .hero-text {
             background: linear-gradient(135deg, #ffffff 0%, #D4AF37 50%, #CD7F32 100%);
             -webkit-background-clip: text;
@@ -444,7 +456,6 @@
             background-clip: text;
         }
 
-        /* Premium Shadows */
         .shadow-premium {
             box-shadow: 
                 0 20px 60px rgba(0, 0, 0, 0.4),
@@ -453,16 +464,13 @@
     </style>
 </head>
 <body class="text-white">
-    <!-- Particle Background -->
     <div class="particles" id="particles"></div>
 
-    <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 nav-glass" role="navigation" aria-label="Main navigation">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
                 <div class="text-2xl font-bold text-shimmer">Jane Paola</div>
                 
-                <!-- Desktop Navigation -->
                 <div class="hidden md:flex space-x-8">
                     <a href="#about" class="hover:text-yellow-400 transition-colors duration-300 font-medium">About</a>
                     <a href="#experience" class="hover:text-yellow-400 transition-colors duration-300 font-medium">Experience</a>
@@ -470,14 +478,12 @@
                     <a href="#contact" class="hover:text-yellow-400 transition-colors duration-300 font-medium">Contact</a>
                 </div>
 
-                <!-- Theme Toggle -->
                 <button id="theme-toggle" class="p-2 rounded-lg glass hover:bg-white/10 transition-all duration-300" aria-label="Toggle theme">
                     <svg class="w-5 h-5 icon-glow" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/>
                     </svg>
                 </button>
 
-                <!-- Mobile Menu Button -->
                 <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg glass" aria-label="Toggle mobile menu">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
@@ -485,7 +491,6 @@
                 </button>
             </div>
 
-            <!-- Mobile Menu -->
             <div id="mobile-menu" class="hidden md:hidden pb-4">
                 <div class="flex flex-col space-y-4">
                     <a href="#about" class="hover:text-yellow-400 transition-colors duration-300">About</a>
@@ -497,725 +502,50 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="min-h-screen flex items-center justify-center px-6 lg:px-8 relative overflow-hidden" role="banner">
-        <!-- Hero Background Elements -->
-        <div class="absolute inset-0 z-0">
-            <!-- Geometric Background -->
-            <svg class="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
-                <!-- Circuit Board Pattern -->
-                <defs>
-                    <pattern id="circuit" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
-                        <path d="M20 20h60v60h-60z" fill="none" stroke="url(#gradient1)" stroke-width="0.5"/>
-                        <circle cx="20" cy="20" r="2" fill="url(#gradient1)"/>
-                        <circle cx="80" cy="20" r="2" fill="url(#gradient1)"/>
-                        <circle cx="20" cy="80" r="2" fill="url(#gradient1)"/>
-                        <circle cx="80" cy="80" r="2" fill="url(#gradient1)"/>
-                        <path d="M20 20L80 20M20 80L80 80M20 20L20 80M80 20L80 80" stroke="url(#gradient1)" stroke-width="0.3"/>
-                    </pattern>
-                    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:0.6"/>
-                        <stop offset="100%" style="stop-color:#CD7F32;stop-opacity:0.3"/>
-                    </linearGradient>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#circuit)"/>
-            </svg>
-            
-            <!-- Floating Code Elements -->
-            <div class="absolute top-20 left-10 opacity-20 floating" style="animation-delay: 0s;">
-                <div class="glass rounded-lg p-4 text-yellow-400 font-mono text-sm">
-                    <div>function testQuality() {</div>
-                    <div class="ml-4">return "perfect";</div>
-                    <div>}</div>
-                </div>
-            </div>
-            
-            <div class="absolute top-40 right-20 opacity-20 floating" style="animation-delay: 1s;">
-                <div class="glass rounded-lg p-4 text-green-400 font-mono text-sm">
-                    <div>✓ All tests passed</div>
-                    <div>✓ Zero bugs found</div>
-                    <div>✓ Quality assured</div>
-                </div>
-            </div>
-            
-            <div class="absolute bottom-40 left-20 opacity-20 floating" style="animation-delay: 2s;">
-                <div class="glass rounded-lg p-4 text-orange-400 font-mono text-sm">
-                    <div>POST /api/test</div>
-                    <div>Status: 200 OK</div>
-                    <div>Response: Success</div>
-                </div>
-            </div>
-            
-            <!-- Animated Quality Badges -->
-            <div class="absolute top-1/3 left-1/4 opacity-30">
-                <div class="w-16 h-16 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 flex items-center justify-center floating">
-                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                    </svg>
-                </div>
-            </div>
-            
-            <div class="absolute bottom-1/3 right-1/4 opacity-30">
-                <div class="w-20 h-20 rounded-full bg-gradient-to-r from-green-400 to-blue-500 flex items-center justify-center floating" style="animation-delay: 1.5s;">
-                    <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                    </svg>
-                </div>
-            </div>
-        </div>
-        
-        <div class="max-w-6xl mx-auto text-center fade-in-up relative z-10">
-            <div class="floating mb-8">
-                <div class="w-32 h-32 mx-auto glass-premium rounded-full flex items-center justify-center shadow-premium">
-                    <svg class="w-16 h-16 text-yellow-400 icon-glow" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                    </svg>
-                </div>
-            </div>
-            
-            <h1 class="text-5xl lg:text-7xl font-black mb-6 hero-text leading-tight">
-                Jane Paola
-            </h1>
-            <p class="text-2xl lg:text-3xl font-light mb-4 text-yellow-400">
-                Senior QA Engineer
-            </p>
-            <p class="text-lg lg:text-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-                Transforming software quality through innovative testing strategies, AI-enhanced automation, and meticulous attention to detail. Delivering excellence in every line of code.
-            </p>
-            
-            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                <a href="#experience" class="btn-premium px-8 py-4 rounded-full font-semibold text-gray-900 text-lg">
-                    View My Work
-                </a>
-                <a href="#contact" class="glass px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300 border border-yellow-400/30">
-                    Get In Touch
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-20 px-6 lg:px-8" role="region" aria-label="About section">
-        <div class="max-w-6xl mx-auto">
-            <div class="glass-premium rounded-3xl p-12 card-hover shadow-premium">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div class="fade-in-up">
-                        <h2 class="text-4xl lg:text-5xl font-bold mb-8 text-shimmer">
-                            About Me
-                        </h2>
-                        <p class="text-lg text-gray-300 mb-6 leading-relaxed">
-                            With over 10 years of experience in quality assurance, I specialize in creating robust testing frameworks that ensure flawless user experiences. My expertise spans across healthcare technology, digital publishing, and e-commerce platforms.
-                        </p>
-                        <p class="text-lg text-gray-300 mb-8 leading-relaxed">
-                            I'm passionate about leveraging AI tools and modern testing methodologies to deliver exceptional software quality. My approach combines technical precision with strategic thinking to identify potential issues before they impact users.
-                        </p>
-                        
-                        <div class="grid grid-cols-2 gap-6">
-                            <div class="text-center glass rounded-xl p-6">
-                                <div class="text-3xl font-bold text-yellow-400 mb-2">10+</div>
-                                <div class="text-sm text-gray-300">Years Experience</div>
-                            </div>
-                            <div class="text-center glass rounded-xl p-6">
-                                <div class="text-3xl font-bold text-yellow-400 mb-2">100+</div>
-                                <div class="text-sm text-gray-300">Projects Completed</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="floating">
-                        <div class="glass-premium rounded-2xl p-8 text-center shadow-premium">
-                            <div class="w-24 h-24 mx-auto mb-6 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center">
-                                <svg class="w-12 h-12 text-gray-900" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                </svg>
-                            </div>
-                            <h3 class="text-2xl font-bold mb-4 text-yellow-400">Quality First</h3>
-                            <p class="text-gray-300">
-                                Every project I touch meets the highest standards of quality and reliability.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="py-20 px-6 lg:px-8" role="region" aria-label="Experience section">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl lg:text-5xl font-bold text-center mb-16 text-shimmer">
-                Professional Experience
-            </h2>
-            
-            <div class="space-y-12">
-                <!-- Healthcare Project -->
-                <div class="glass-premium rounded-3xl p-12 card-hover shadow-premium fade-in-up">
-                    <div class="flex flex-col lg:flex-row gap-12">
-                        <div class="lg:w-1/3">
-                            <div class="w-24 h-24 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center mb-8 floating">
-                                <svg class="w-12 h-12 text-gray-900" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M3 6a3 3 0 013-3h10a1 1 0 01.8 1.6L14.25 8l2.55 3.4A1 1 0 0116 13H6a1 1 0 00-1 1v3a1 1 0 11-2 0V6z" clip-rule="evenodd"/>
-                                </svg>
-                            </div>
-                            <h3 class="text-3xl font-bold mb-4 text-white">Healthcare Platform QA Lead</h3>
-                            <div class="text-lg text-yellow-400 mb-2 font-semibold">Senior QA Engineer</div>
-                            <div class="text-gray-400 mb-8">Healthcare Technology Company | Sep 2021 - Present</div>
-                        </div>
-                        
-                        <div class="lg:w-2/3">
-                            <p class="text-xl text-gray-300 mb-8 leading-relaxed">
-                                Leading comprehensive testing initiatives for critical healthcare platforms and seamless patient experiences across teleconsultation and medical data management systems.
-                            </p>
-                            
-                            <!-- Key Features -->
-                            <div class="grid md:grid-cols-2 gap-8 mb-8">
-                                <div class="glass rounded-xl p-6">
-                                    <h4 class="font-bold text-yellow-400 mb-4 text-lg">Teleconsultation Platform</h4>
-                                    <ul class="text-gray-300 space-y-2">
-                                        <li class="flex items-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span>Video call quality assurance</li>
-                                        <li class="flex items-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span>Real-time chat functionality</li>
-                                        <li class="flex items-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span>Appointment scheduling systems</li>
-                                        <li class="flex items-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span>Payment gateway integration</li>
-                                    </ul>
-                                </div>
-
-                                <div class="glass rounded-xl p-6">
-                                    <h4 class="font-bold text-orange-400 mb-4 text-lg">Medical Data Management</h4>
-                                    <ul class="text-gray-300 space-y-2">
-                                        <li class="flex items-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span>Patient record validation</li>
-                                        <li class="flex items-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span>Data Integrity Testing</li>
-                                        <li class="flex items-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span>Multi-platform synchronization</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Achievements -->
-                            <div class="mb-8">
-                                <h4 class="font-bold text-green-400 mb-4 text-xl">Key Achievements:</h4>
-                                <div class="grid md:grid-cols-2 gap-4">
-                                    <div class="flex items-center space-x-3">
-                                        <div class="w-3 h-3 bg-green-400 rounded-full"></div>
-                                        <span class="text-gray-300">99.9% platform uptime achieved</span>
-                                    </div>
-                                    <div class="flex items-center space-x-3">
-                                        <div class="w-3 h-3 bg-green-400 rounded-full"></div>
-                                        <span class="text-gray-300">Zero security breaches</span>
-                                    </div>
-                                    <div class="flex items-center space-x-3">
-                                        <div class="w-3 h-3 bg-green-400 rounded-full"></div>
-                                        <span class="text-gray-300">50% reduction in critical bugs</span>
-                                    </div>
-                                    <div class="flex items-center space-x-3">
-                                        <div class="w-3 h-3 bg-green-400 rounded-full"></div>
-                                        <span class="text-gray-300">Data integrity testing in Medical Data Management</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Tech Tags -->
-                            <div class="flex flex-wrap gap-3">
-                                <span class="bg-yellow-400/20 text-yellow-400 px-4 py-2 rounded-full text-sm font-medium">Manual Testing</span>
-                                <span class="bg-orange-400/20 text-orange-400 px-4 py-2 rounded-full text-sm font-medium">API Testing</span>
-                                <span class="bg-yellow-400/20 text-yellow-400 px-4 py-2 rounded-full text-sm font-medium">Data Integrity Testing</span>
-                                <span class="bg-orange-400/20 text-orange-400 px-4 py-2 rounded-full text-sm font-medium">Healthcare Systems</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- E-commerce Project -->
-                <div class="glass-premium rounded-3xl p-12 card-hover shadow-premium fade-in-up">
-                    <div class="flex flex-col lg:flex-row gap-12">
-                        <div class="lg:w-1/3">
-                            <div class="w-24 h-24 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center mb-8 floating">
-                                <svg class="w-12 h-12 text-gray-900" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 2L3 7v11a1 1 0 001 1h3a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h3a1 1 0 001-1V7l-7-5z" clip-rule="evenodd"/>
-                                </svg>
-                            </div>
-                            <h3 class="text-3xl font-bold mb-4 text-white">E-commerce Platform Testing</h3>
-                            <div class="text-lg text-yellow-400 mb-2 font-semibold">QA Engineer</div>
-                            <div class="text-gray-400 mb-8">Digital Marketing Agency | Sep 2018 - Aug 2021</div>
-                        </div>
-                        
-                        <div class="lg:w-2/3">
-                            <p class="text-xl text-gray-300 mb-8 leading-relaxed">
-                                Developed and executed comprehensive testing strategies for multi-brand e-commerce platforms, ensuring seamless user experiences across web and mobile applications with focus on conversion optimization.
-                            </p>
-                            
-                            <!-- Key Features -->
-                            <div class="grid md:grid-cols-2 gap-8 mb-8">
-                                <div class="glass rounded-xl p-6">
-                                    <h4 class="font-bold text-yellow-400 mb-4 text-lg">Multi-Brand Platform</h4>
-                                    <ul class="text-gray-300 space-y-2">
-                                        <li class="flex items-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span>Cross-platform compatibility</li>
-                                        <li class="flex items-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span>Brand-specific customization</li>
-                                        <li class="flex items-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span>Inventory management systems</li>
-                                    </ul>
-                                </div>
-
-                                <div class="glass rounded-xl p-6">
-                                    <h4 class="font-bold text-orange-400 mb-4 text-lg">Payment & Order Processing</h4>
-                                    <ul class="text-gray-300 space-y-2">
-                                        <li class="flex items-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span>Payment gateway testing</li>
-                                        <li class="flex items-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span>Order workflow validation</li>
-                                        <li class="flex items-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span>Shipping integration testing</li>
-                                        <li class="flex items-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span>Return process automation</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Achievements -->
-                            <div class="mb-8">
-                                <h4 class="font-bold text-green-400 mb-4 text-xl">Key Achievements:</h4>
-                                <div class="grid md:grid-cols-2 gap-4">
-                                    <div class="flex items-center space-x-3">
-                                        <div class="w-3 h-3 bg-green-400 rounded-full"></div>
-                                        <span class="text-gray-300">25% increase in conversion rates</span>
-                                    </div>
-                                    <div class="flex items-center space-x-3">
-                                        <div class="w-3 h-3 bg-green-400 rounded-full"></div>
-                                        <span class="text-gray-300">Zero payment processing errors</span>
-                                    </div>
-                                    <div class="flex items-center space-x-3">
-                                        <div class="w-3 h-3 bg-green-400 rounded-full"></div>
-                                        <span class="text-gray-300">Cross-browser compatibility achieved</span>
-                                    </div>
-                                    <div class="flex items-center space-x-3">
-                                        <div class="w-3 h-3 bg-green-400 rounded-full"></div>
-                                        <span class="text-gray-300">Mobile responsiveness optimized</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Tech Tags -->
-                            <div class="flex flex-wrap gap-3">
-                                <span class="bg-yellow-400/20 text-yellow-400 px-4 py-2 rounded-full text-sm font-medium">Selenium Automation</span>
-                                <span class="bg-orange-400/20 text-orange-400 px-4 py-2 rounded-full text-sm font-medium">E-commerce Testing</span>
-                                <span class="bg-yellow-400/20 text-yellow-400 px-4 py-2 rounded-full text-sm font-medium">PWA Testing</span>
-                                <span class="bg-orange-400/20 text-orange-400 px-4 py-2 rounded-full text-sm font-medium">Team Leadership</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Publishing Platform Project -->
-                <div class="glass-premium rounded-3xl p-12 card-hover shadow-premium fade-in-up">
-                    <div class="flex flex-col lg:flex-row gap-12">
-                        <div class="lg:w-1/3">
-                            <div class="w-24 h-24 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center mb-8 floating">
-                                <svg class="w-12 h-12 text-gray-900" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm0 2v8h12V6H4zm2 2h8v2H6V8zm0 4h4v2H6v-2z" clip-rule="evenodd"/>
-                                </svg>
-                            </div>
-                            <h3 class="text-3xl font-bold mb-4 text-white">Publishing Platform QA Systems</h3>
-                            <div class="text-lg text-yellow-400 mb-2 font-semibold">Senior System QA Engineer</div>
-                            <div class="text-gray-400 mb-8">Media & Publishing Company | Aug 2016 - Aug 2018</div>
-                        </div>
-                        
-                        <div class="lg:w-2/3">
-                            <p class="text-xl text-gray-300 mb-8 leading-relaxed">
-                                Developed structured testing programs for digital publishing platforms and content management systems. Managed defect tracking and coordinated with technical teams to optimize QA processes for high-traffic editorial platforms.
-                            </p>
-                            
-                            <!-- Key Features -->
-                            <div class="grid md:grid-cols-2 gap-8 mb-8">
-                                <div class="glass rounded-xl p-6">
-                                    <h4 class="font-bold text-yellow-400 mb-4 text-lg">Automotive Classified Platform</h4>
-                                    <ul class="text-gray-300 space-y-2">
-                                        <li class="flex items-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span>Classified listing management</li>
-                                        <li class="flex items-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span>Lead generation systems</li>
-                                        <li class="flex items-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span>Field data collection workflows</li>
-                                        <li class="flex items-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span>Sales reporting systems</li>
-                                    </ul>
-                                </div>
-
-                                <div class="glass rounded-xl p-6">
-                                    <h4 class="font-bold text-orange-400 mb-4 text-lg">Content Management Systems</h4>
-                                    <ul class="text-gray-300 space-y-2">
-                                        <li class="flex items-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span>Editorial workflow testing</li>
-                                        <li class="flex items-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span>SEO compliance validation</li>
-                                        <li class="flex items-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span>Multi-user content management</li>
-                                        <li class="flex items-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-3"></span>Content publication processes</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Achievements -->
-                            <div class="mb-8">
-                                <h4 class="font-bold text-green-400 mb-4 text-xl">Key Achievements:</h4>
-                                <div class="grid md:grid-cols-2 gap-4">
-                                    <div class="flex items-center space-x-3">
-                                        <div class="w-3 h-3 bg-green-400 rounded-full"></div>
-                                        <span class="text-gray-300">95% customer issue resolution</span>
-                                    </div>
-                                    <div class="flex items-center space-x-3">
-                                        <div class="w-3 h-3 bg-green-400 rounded-full"></div>
-                                        <span class="text-gray-300">Improved system stability</span>
-                                    </div>
-                                    <div class="flex items-center space-x-3">
-                                        <div class="w-3 h-3 bg-green-400 rounded-full"></div>
-                                        <span class="text-gray-300">SEO compliance assurance</span>
-                                    </div>
-                                    <div class="flex items-center space-x-3">
-                                        <div class="w-3 h-3 bg-green-400 rounded-full"></div>
-                                        <span class="text-gray-300">Streamlined data processes</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Tech Tags -->
-                            <div class="flex flex-wrap gap-3">
-                                <span class="bg-yellow-400/20 text-yellow-400 px-4 py-2 rounded-full text-sm font-medium">CMS Testing</span>
-                                <span class="bg-orange-400/20 text-orange-400 px-4 py-2 rounded-full text-sm font-medium">SEO Validation</span>
-                                <span class="bg-yellow-400/20 text-yellow-400 px-4 py-2 rounded-full text-sm font-medium">Database Management</span>
-                                <span class="bg-orange-400/20 text-orange-400 px-4 py-2 rounded-full text-sm font-medium">High-Traffic Systems</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-20 px-6 lg:px-8" role="region" aria-label="Skills section">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl lg:text-5xl font-bold text-center mb-16 text-shimmer">
-                Technical Skills & Expertise
-            </h2>
-            
-            <div class="grid lg:grid-cols-2 gap-12">
-                <!-- Testing Tools -->
-                <div class="glass-premium rounded-3xl p-10 shadow-premium">
-                    <h3 class="text-3xl font-bold mb-8 text-yellow-400 flex items-center">
-                        <span class="text-4xl mr-4">🔧</span> Testing Tools & Platforms
-                    </h3>
-                    <div class="space-y-6">
-                        <div class="skill-item">
-                            <div class="flex justify-between items-center mb-3">
-                                <span class="text-white font-medium text-lg">Postman (API Testing)</span>
-                                <span class="text-green-400 font-bold">80%</span>
-                            </div>
-                            <div class="bg-gray-700 rounded-full h-3">
-                                <div class="skill-bar-fill bg-gradient-to-r from-green-400 to-green-600 h-3 rounded-full" style="--skill-width: 80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="flex justify-between items-center mb-3">
-                                <span class="text-white font-medium text-lg">Selenium (Automation)</span>
-                                <span class="text-green-400 font-bold">70%</span>
-                            </div>
-                            <div class="bg-gray-700 rounded-full h-3">
-                                <div class="skill-bar-fill bg-gradient-to-r from-green-400 to-green-600 h-3 rounded-full" style="--skill-width: 70%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="flex justify-between items-center mb-3">
-                                <span class="text-white font-medium text-lg">MySQL Database Testing</span>
-                                <span class="text-green-400 font-bold">70%</span>
-                            </div>
-                            <div class="bg-gray-700 rounded-full h-3">
-                                <div class="skill-bar-fill bg-gradient-to-r from-green-400 to-green-600 h-3 rounded-full" style="--skill-width: 60%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="flex justify-between items-center mb-3">
-                                <span class="text-white font-medium text-lg">Playwright (Learning)</span>
-                                <span class="text-amber-400 font-bold">40%</span>
-                            </div>
-                            <div class="bg-gray-700 rounded-full h-3">
-                                <div class="skill-bar-fill bg-gradient-to-r from-amber-400 to-amber-600 h-3 rounded-full" style="--skill-width: 40%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- AI Enhanced Testing -->
-                <div class="glass-premium rounded-3xl p-10 shadow-premium">
-                    <h3 class="text-3xl font-bold mb-8 text-orange-400 flex items-center">
-                        <span class="text-4xl mr-4">🤖</span> AI-Enhanced Testing
-                    </h3>
-                    <div class="space-y-6">
-                        <div class="skill-item">
-                            <div class="flex justify-between items-center mb-3">
-                                <span class="text-white font-medium text-lg">Claude AI</span>
-                                <span class="text-green-400 font-bold">80%</span>
-                            </div>
-                            <div class="bg-gray-700 rounded-full h-3">
-                                <div class="skill-bar-fill bg-gradient-to-r from-green-400 to-green-600 h-3 rounded-full" style="--skill-width: 80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="flex justify-between items-center mb-3">
-                                <span class="text-white font-medium text-lg">ChatGPT</span>
-                                <span class="text-green-400 font-bold">80%</span>
-                            </div>
-                            <div class="bg-gray-700 rounded-full h-3">
-                                <div class="skill-bar-fill bg-gradient-to-r from-green-400 to-green-600 h-3 rounded-full" style="--skill-width: 80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="flex justify-between items-center mb-3">
-                                <span class="text-white font-medium text-lg">DeepSeek</span>
-                                <span class="text-green-400 font-bold">80%</span>
-                            </div>
-                            <div class="bg-gray-700 rounded-full h-3">
-                                <div class="skill-bar-fill bg-gradient-to-r from-green-400 to-green-600 h-3 rounded-full" style="--skill-width: 80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="flex justify-between items-center mb-3">
-                                <span class="text-white font-medium text-lg">GitHub CoPilot</span>
-                                <span class="text-green-400 font-bold">75%</span>
-                            </div>
-                            <div class="bg-gray-700 rounded-full h-3">
-                                <div class="skill-bar-fill bg-gradient-to-r from-green-400 to-green-600 h-3 rounded-full" style="--skill-width: 75%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project Management -->
-                <div class="glass-premium rounded-3xl p-10 shadow-premium">
-                    <h3 class="text-3xl font-bold mb-8 text-yellow-400 flex items-center">
-                        <span class="text-4xl mr-4">📋</span> Project Management & Documentation
-                    </h3>
-                    <div class="space-y-6">
-                        <div class="skill-item">
-                            <div class="flex justify-between items-center mb-3">
-                                <span class="text-white font-medium text-lg">Jira</span>
-                                <span class="text-green-400 font-bold">80%</span>
-                            </div>
-                            <div class="bg-gray-700 rounded-full h-3">
-                                <div class="skill-bar-fill bg-gradient-to-r from-green-400 to-green-600 h-3 rounded-full" style="--skill-width: 80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="flex justify-between items-center mb-3">
-                                <span class="text-white font-medium text-lg">Asana / ClickUp</span>
-                                <span class="text-green-400 font-bold">75%</span>
-                            </div>
-                            <div class="bg-gray-700 rounded-full h-3">
-                                <div class="skill-bar-fill bg-gradient-to-r from-green-400 to-green-600 h-3 rounded-full" style="--skill-width: 75%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="flex justify-between items-center mb-3">
-                                <span class="text-white font-medium text-lg">Miro (Workflow Design)</span>
-                                <span class="text-green-400 font-bold">80%</span>
-                            </div>
-                            <div class="bg-gray-700 rounded-full h-3">
-                                <div class="skill-bar-fill bg-gradient-to-r from-green-400 to-green-600 h-3 rounded-full" style="--skill-width: 80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="flex justify-between items-center mb-3">
-                                <span class="text-white font-medium text-lg">Git Version Control</span>
-                                <span class="text-green-400 font-bold">60%</span>
-                            </div>
-                            <div class="bg-gray-700 rounded-full h-3">
-                                <div class="skill-bar-fill bg-gradient-to-r from-green-400 to-green-600 h-3 rounded-full" style="--skill-width: 50%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testing Specializations -->
-                <div class="glass-premium rounded-3xl p-10 shadow-premium">
-                    <h3 class="text-3xl font-bold mb-8 text-orange-400 flex items-center">
-                        <span class="text-4xl mr-4">🧪</span> Testing Specializations
-                    </h3>
-                    <div class="space-y-4">
-                        <div class="glass rounded-xl p-6">
-                            <h4 class="font-bold text-yellow-400 mb-3 text-lg">Manual Testing</h4>
-                            <p class="text-gray-300">End-to-end web & mobile application testing</p>
-                        </div>
-                        <div class="glass rounded-xl p-6">
-                            <h4 class="font-bold text-orange-400 mb-3 text-lg">Automation Testing</h4>
-                            <p class="text-gray-300">Selenium framework implementation & maintenance</p>
-                        </div>
-                        <div class="glass rounded-xl p-6">
-                            <h4 class="font-bold text-yellow-400 mb-3 text-lg">Cross-Browser Testing</h4>
-                            <p class="text-gray-300">Compatibility across major browsers & platforms</p>
-                        </div>
-                        <div class="glass rounded-xl p-6">
-                            <h4 class="font-bold text-orange-400 mb-3 text-lg">API Testing</h4>
-                            <p class="text-gray-300">RESTful service testing with Postman</p>
-                        </div>
-                        <div class="glass rounded-xl p-6">
-                            <h4 class="font-bold text-yellow-400 mb-3 text-lg">Database Testing</h4>
-                            <p class="text-gray-300">SQL queries for data integrity validation</p>
-                        </div>
-                        <div class="glass rounded-xl p-6">
-                            <h4 class="font-bold text-orange-400 mb-3 text-lg">User Acceptance Testing</h4>
-                            <p class="text-gray-300">End-user experience validation</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Industry Experience with Flip Effect -->
-            <div class="mt-16">
-                <h3 class="text-4xl font-bold text-center mb-12 text-green-400 flex items-center justify-center">
-                    <span class="text-5xl mr-4">🏢</span> Industry Experience
-                </h3>
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="flip-card h-80">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front glass-premium rounded-2xl p-8 text-center card-hover shadow-premium">
-                                <div class="w-20 h-20 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                                    <svg class="w-10 h-10 text-gray-900" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M3 6a3 3 0 013-3h10a1 1 0 01.8 1.6L14.25 8l2.55 3.4A1 1 0 0116 13H6a1 1 0 00-1 1v3a1 1 0 11-2 0V6z" clip-rule="evenodd"/>
-                                    </svg>
-                                </div>
-                                <h4 class="font-bold text-2xl mb-3 text-yellow-400">Healthcare Technology</h4>
-                                <p class="text-lg text-gray-300 mb-3 font-semibold">3+ years</p>
-                                <p class="text-sm text-gray-400">Healthcare platforms, medical data validation, compliance</p>
-                            </div>
-                            <div class="flip-card-back glass-premium rounded-2xl p-8 shadow-premium">
-                                <p class="text-lg text-gray-300 leading-relaxed">Validated medical data integrity and ensured teleconsultation reliability.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="flip-card h-80">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front glass-premium rounded-2xl p-8 text-center card-hover shadow-premium">
-                                <div class="w-20 h-20 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                                    <svg class="w-10 h-10 text-gray-900" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm0 2v8h12V6H4z" clip-rule="evenodd"/>
-                                    </svg>
-                                </div>
-                                <h4 class="font-bold text-2xl mb-3 text-orange-400">Digital Publishing</h4>
-                                <p class="text-lg text-gray-300 mb-3 font-semibold">2+ years</p>
-                                <p class="text-sm text-gray-400">CMS, SEO testing, editorial workflows, data integration testing</p>
-                            </div>
-                            <div class="flip-card-back glass-premium rounded-2xl p-8 shadow-premium">
-                                <p class="text-lg text-gray-300 leading-relaxed">Tested CMS workflows, ensured SEO compliance, and data integration testing.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="flip-card h-80">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front glass-premium rounded-2xl p-8 text-center card-hover shadow-premium">
-                                <div class="w-20 h-20 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                                    <svg class="w-10 h-10 text-gray-900" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 2L3 7v11a1 1 0 001 1h3a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h3a1 1 0 001-1V7l-7-5z" clip-rule="evenodd"/>
-                                    </svg>
-                                </div>
-                                <h4 class="font-bold text-2xl mb-3 text-yellow-400">E-commerce</h4>
-                                <p class="text-lg text-gray-300 mb-3 font-semibold">Project experience</p>
-                                <p class="text-sm text-gray-400">Payment systems, order processing, multi-brand platforms</p>
-                            </div>
-                            <div class="flip-card-back glass-premium rounded-2xl p-8 shadow-premium">
-                                <p class="text-lg text-gray-300 leading-relaxed">Validated payment gateways, tested order processing, and ensured cross-platform compatibility.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="flip-card h-80">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front glass-premium rounded-2xl p-8 text-center card-hover shadow-premium">
-                                <div class="w-20 h-20 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                                    <svg class="w-10 h-10 text-gray-900" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                                    </svg>
-                                </div>
-                                <h4 class="font-bold text-2xl mb-3 text-orange-400">Digital Marketing</h4>
-                                <p class="text-lg text-gray-300 mb-3 font-semibold">Project experience</p>
-                                <p class="text-sm text-gray-400">Web app testing, campaign tracking, PWA validation</p>
-                            </div>
-                            <div class="flip-card-back glass-premium rounded-2xl p-8 shadow-premium">
-                                <p class="text-lg text-gray-300 leading-relaxed">Tested campaign tracking systems, validated PWAs, and ensured web app performance.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 px-6 lg:px-8" role="region" aria-label="Contact section">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-4xl lg:text-5xl font-bold mb-8 text-shimmer">
-                Let's Work Together
-            </h2>
-            <p class="text-xl text-gray-300 mb-12 leading-relaxed">
-                Have a project in mind or need a QA expert to elevate your software quality? Reach out to discuss how I can help transform your testing processes!
-            </p>
-            <div class="flex flex-col md:flex-row gap-8 justify-center items-center">
-                <a href="mailto:janesoriano09@gmail.com" class="btn-premium flex items-center space-x-4 px-10 py-5 rounded-full font-bold text-xl text-gray-900 shadow-premium" aria-label="Email Jane Paola">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
-                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
-                    </svg>
-                    <span>Email Me</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
     <!-- Chibi Character -->
     <div class="chibi-container">
         <div class="chibi-speech-bubble" id="chibi-speech">
-            Hi there! 👋
+            Hi there!
         </div>
         <svg class="chibi-character" viewBox="0 0 120 140" xmlns="http://www.w3.org/2000/svg">
-            <!-- Body -->
             <ellipse cx="60" cy="110" rx="28" ry="22" fill="#6366F1" stroke="#4F46E5" stroke-width="2"/>
             <ellipse cx="60" cy="108" rx="24" ry="18" fill="#8B5CF6" opacity="0.3"/>
             
-            <!-- Head -->
             <circle cx="60" cy="50" r="32" fill="#FBBF24" stroke="#F59E0B" stroke-width="2"/>
             <circle cx="60" cy="48" r="28" fill="#FCD34D" opacity="0.4"/>
             
-            <!-- Shoulder-length Hair -->
             <g fill="#8B4513" stroke="#654321" stroke-width="1">
-                <!-- Main hair shape -->
                 <path class="chibi-hair-flow" d="M30 40 Q35 25 60 28 Q85 25 90 40 Q88 15 60 15 Q32 15 30 40"/>
-                <!-- Left side hair -->
                 <path class="chibi-hair-side-left" d="M30 40 Q25 50 28 65 Q32 70 38 68 Q35 55 35 45"/>
-                <!-- Right side hair -->
                 <path class="chibi-hair-side-right" d="M90 40 Q95 50 92 65 Q88 70 82 68 Q85 55 85 45"/>
-                <!-- Hair layers for volume -->
                 <path class="chibi-hair-flow" d="M35 35 Q45 30 60 32 Q75 30 85 35 Q80 25 60 25 Q40 25 35 35" opacity="0.7" style="animation-delay: 0.5s;"/>
-                <!-- Bangs -->
                 <path class="chibi-hair-flow" d="M40 35 Q50 30 60 32 Q70 30 80 35 Q75 28 60 28 Q45 28 40 35" opacity="0.5" style="animation-delay: 1s;"/>
             </g>
             
-            <!-- Hair Shine -->
             <ellipse cx="55" cy="32" rx="8" ry="4" fill="#CD853F" opacity="0.6"/>
             <ellipse cx="65" cy="30" rx="6" ry="3" fill="#CD853F" opacity="0.4"/>
             
-            <!-- Glasses Frame -->
             <g class="chibi-glasses-shine">
                 <circle cx="48" cy="45" r="13" fill="rgba(255,255,255,0.2)" stroke="#1F2937" stroke-width="2.5"/>
                 <circle cx="72" cy="45" r="13" fill="rgba(255,255,255,0.2)" stroke="#1F2937" stroke-width="2.5"/>
                 <line x1="61" y1="45" x2="59" y2="45" stroke="#1F2937" stroke-width="2.5"/>
                 <line x1="35" y1="45" x2="30" y2="42" stroke="#1F2937" stroke-width="2"/>
                 <line x1="85" y1="45" x2="90" y2="42" stroke="#1F2937" stroke-width="2"/>
-                <!-- Glasses reflection -->
                 <ellipse cx="45" cy="40" rx="4" ry="6" fill="rgba(255,255,255,0.4)" opacity="0.8"/>
                 <ellipse cx="69" cy="40" rx="4" ry="6" fill="rgba(255,255,255,0.4)" opacity="0.8"/>
             </g>
             
-            <!-- Eyes (Larger and more expressive) -->
-            <g class="chibi-blink">
+            <g class="chibi-blink" id="chibi-eyes">
                 <ellipse cx="48" cy="45" rx="8" ry="9" fill="#1F2937"/>
                 <ellipse cx="72" cy="45" rx="8" ry="9" fill="#1F2937"/>
-                <!-- Eye highlights -->
                 <circle cx="51" cy="42" r="3" fill="#FFFFFF"/>
                 <circle cx="75" cy="42" r="3" fill="#FFFFFF"/>
                 <circle cx="52" cy="44" r="1.5" fill="#FFFFFF"/>
                 <circle cx="76" cy="44" r="1.5" fill="#FFFFFF"/>
-                <!-- Sparkles in eyes -->
                 <circle cx="46" cy="47" r="1" fill="#60A5FA" opacity="0.8"/>
                 <circle cx="70" cy="47" r="1" fill="#60A5FA" opacity="0.8"/>
             </g>
             
-            <!-- Eyelashes -->
             <g stroke="#1F2937" stroke-width="1.5" stroke-linecap="round">
                 <path d="M40 38 L42 36"/>
                 <path d="M44 36 L45 34"/>
@@ -1227,47 +557,35 @@
                 <path d="M62 38 L60 36"/>
             </g>
             
-            <!-- Nose (smaller and cuter) -->
             <ellipse cx="60" cy="52" rx="1" ry="1.5" fill="#F59E0B" opacity="0.8"/>
             
-            <!-- Animated Mouth -->
-            <g>
-                <path class="chibi-mouth-animation" d="M54 58 Q60 60 66 58" stroke="#1F2937" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-                <!-- Mouth interior -->
+            <g id="chibi-mouth">
+                <path id="chibi-mouth-path" class="chibi-mouth-animation" d="M54 58 Q60 60 66 58" stroke="#1F2937" stroke-width="2.5" fill="none" stroke-linecap="round"/>
                 <path d="M56 59 Q60 60 64 59" stroke="#F87171" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.6"/>
             </g>
             
-            <!-- Arms -->
             <ellipse cx="32" cy="88" rx="9" ry="16" fill="#FBBF24" stroke="#F59E0B" stroke-width="1"/>
             <g class="chibi-wave">
                 <ellipse cx="88" cy="83" rx="9" ry="16" fill="#FBBF24" stroke="#F59E0B" stroke-width="1"/>
-                <!-- Waving Hand -->
                 <circle cx="88" cy="67" r="7" fill="#FBBF24" stroke="#F59E0B" stroke-width="1"/>
-                <!-- Fingers -->
                 <ellipse cx="85" cy="62" rx="2" ry="4" fill="#FBBF24"/>
                 <ellipse cx="88" cy="60" rx="2" ry="4" fill="#FBBF24"/>
                 <ellipse cx="91" cy="62" rx="2" ry="4" fill="#FBBF24"/>
             </g>
             
-            <!-- Legs -->
             <ellipse cx="48" cy="132" rx="7" ry="13" fill="#1F2937"/>
             <ellipse cx="72" cy="132" rx="7" ry="13" fill="#1F2937"/>
-            <!-- Cute shoes -->
             <ellipse cx="48" cy="140" rx="9" ry="4" fill="#EC4899"/>
             <ellipse cx="72" cy="140" rx="9" ry="4" fill="#EC4899"/>
             
-            <!-- Laptop/Testing Device -->
             <rect x="22" y="93" width="24" height="18" rx="3" fill="#374151" stroke="#1F2937" stroke-width="1"/>
             <rect x="24" y="95" width="20" height="13" fill="#10B981"/>
             <text x="34" y="103" font-family="monospace" font-size="5" fill="#FFFFFF" text-anchor="middle" font-weight="bold">QA</text>
-            <!-- Screen glow -->
             <rect x="24" y="95" width="20" height="13" fill="url(#screenGlow)" opacity="0.3"/>
             
-            <!-- Enhanced Blush -->
             <ellipse cx="35" cy="55" rx="4" ry="3" fill="#F87171" opacity="0.7"/>
             <ellipse cx="85" cy="55" rx="4" ry="3" fill="#F87171" opacity="0.7"/>
             
-            <!-- Hair Accessories (Cute clips) -->
             <g>
                 <ellipse cx="40" cy="30" rx="3" ry="2" fill="#EC4899"/>
                 <circle cx="40" cy="30" r="1" fill="#FFFFFF"/>
@@ -1275,12 +593,10 @@
                 <circle cx="80" cy="30" r="1" fill="#FFFFFF"/>
             </g>
             
-            <!-- Heart floating above -->
             <g class="chibi-heart" opacity="0.8">
                 <path d="M95 25 C95 22, 97 20, 100 20 C103 20, 105 22, 105 25 C105 22, 107 20, 110 20 C113 20, 115 22, 115 25 C115 30, 105 35, 105 35 C105 35, 95 30, 95 25 Z" fill="#F87171"/>
             </g>
             
-            <!-- Sparkles around character -->
             <g class="chibi-sparkles" opacity="0.6">
                 <circle cx="20" cy="30" r="1" fill="#FCD34D"/>
                 <circle cx="100" cy="60" r="1.5" fill="#60A5FA"/>
@@ -1288,7 +604,6 @@
                 <circle cx="105" cy="90" r="1" fill="#34D399"/>
             </g>
             
-            <!-- Gradient definitions -->
             <defs>
                 <linearGradient id="screenGlow" x1="0%" y1="0%" x2="100%" y2="100%">
                     <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.8"/>
@@ -1298,14 +613,7 @@
         </svg>
     </div>
 
-    <!-- Footer -->
-    <footer class="py-12 px-6 lg:px-8 glass text-center" role="contentinfo">
-        <p class="text-gray-300 text-lg">&copy; 2025 Jane Paola. All rights reserved.</p>
-    </footer>
-
-    <!-- JavaScript for Interactivity -->
     <script>
-        // Create floating particles
         function createParticles() {
             const particlesContainer = document.getElementById('particles');
             const particleCount = 50;
@@ -1320,26 +628,21 @@
             }
         }
 
-        // Initialize particles
         createParticles();
 
-        // Mobile Menu Toggle
         document.getElementById('mobile-menu-button').addEventListener('click', () => {
             document.getElementById('mobile-menu').classList.toggle('hidden');
         });
 
-        // Theme Toggle
         document.getElementById('theme-toggle').addEventListener('click', () => {
             document.documentElement.classList.toggle('dark');
             localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
         });
 
-        // Apply saved theme
         if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');
         }
 
-        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1353,7 +656,6 @@
             });
         });
 
-        // Intersection Observer for fade-in animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -1367,20 +669,19 @@
             });
         }, observerOptions);
 
-        // Observe all sections for animations
         document.querySelectorAll('section').forEach(section => {
             observer.observe(section);
         });
 
-        // Chibi Character Interactions
+        // Chibi Character Interactions with multiple languages
         const chibiMessages = [
             "Hi there! 👋",
-            "Kumusta! 👋",          // Filipino
-            "こんにちは! 👋",        // Japanese
-            "你好! 👋",             // Chinese
-            "안녕하세요! 👋",        // Korean
-            "¡Hola! 👋",           // Spanish
-            "Bonjour! 👋",         // French
+            "Kumusta! 👋",
+            "こんにちは! 👋",
+            "你好! 👋",
+            "안녕하세요! 👋",
+            "¡Hola! 👋",
+            "Bonjour! 👋",
             "Testing in progress! 🧪",
             "Quality first! ✨",
             "Bug-free zone! 🐛❌",
@@ -1393,19 +694,16 @@
         let messageIndex = 0;
         const speechBubble = document.getElementById('chibi-speech');
 
-        // Change chibi message every 6 seconds
         setInterval(() => {
             messageIndex = (messageIndex + 1) % chibiMessages.length;
             speechBubble.textContent = chibiMessages[messageIndex];
         }, 6000);
 
-        // Add scroll-based interactions
         let lastScrollY = window.scrollY;
         window.addEventListener('scroll', () => {
             const currentScrollY = window.scrollY;
             const chibiContainer = document.querySelector('.chibi-container');
             
-            // Add subtle bounce effect when scrolling
             if (Math.abs(currentScrollY - lastScrollY) > 50) {
                 chibiContainer.style.animation = 'none';
                 setTimeout(() => {
@@ -1416,7 +714,6 @@
             lastScrollY = currentScrollY;
         });
 
-        // Section-based messages
         const sectionObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -1443,10 +740,40 @@
             });
         }, { threshold: 0.5 });
 
-        // Observe sections for chibi messages
         document.querySelectorAll('section[id]').forEach(section => {
             sectionObserver.observe(section);
         });
+
+        // Email button hover interaction with chibi
+        const emailButton = document.querySelector('a[href^="mailto:"]');
+        const chibiMouth = document.getElementById('chibi-mouth-path');
+        const chibiEyes = document.getElementById('chibi-eyes');
+        
+        const encouragingMessages = [
+            "Yes! Click it! 🎯",
+            "Do it! Let's chat! 💬",
+            "I dare you! 😄",
+            "Don't be shy! 📧",
+            "Just one click away! ✨",
+            "I believe in you! 💪"
+        ];
+        
+        emailButton.addEventListener('mouseenter', () => {
+            const randomMessage = encouragingMessages[Math.floor(Math.random() * encouragingMessages.length)];
+            speechBubble.textContent = randomMessage;
+            speechBubble.classList.add('email-hover');
+            
+            chibiMouth.classList.add('chibi-mouth-excited');
+            chibiEyes.classList.add('chibi-eyes-sparkle');
+        });
+        
+        emailButton.addEventListener('mouseleave', () => {
+            speechBubble.textContent = chibiMessages[messageIndex];
+            speechBubble.classList.remove('email-hover');
+            
+            chibiMouth.classList.remove('chibi-mouth-excited');
+            chibiEyes.classList.remove('chibi-eyes-sparkle');
+        });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'986a5e4fa6f86e8f',t:'MTc1OTEzNzI0Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
 </html>
